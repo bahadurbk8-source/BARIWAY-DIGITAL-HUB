@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="ne">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="BARIWAY DIGITAL HUB - Website Development Management">
+
+    <meta
+        name="theme-color"
+        content="#2563eb">
+
+    <title>
+        BARIWAY DIGITAL HUB | Website Development
+    </title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         WEBSITE CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/website.css">
+
+</head>
+
+
+<body>
+
+
+<div class="website-page">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+
+        <!-- BRAND -->
+        <div class="sidebar-logo">
+
+            <div class="logo-box">
+                B
+            </div>
+
+            <div class="logo-text">
+
+                <h2>
+                    BARIWAY
+                </h2>
+
+                <span>
+                    DIGITAL HUB
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+        <nav
+            class="sidebar-nav"
+            aria-label="Main Navigation">
+
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-gauge-high"></i>
+
+                <span
+                    data-ne="ड्यासबोर्ड"
+                    data-en="Dashboard">
+
+                    ड्यासबोर्ड
+
+                </span>
+
+            </a>
+
+
+            <a
+                href="website.html"
+                class="active"
+                aria-current="page">
+
+                <i class="fa-solid fa-globe"></i>
+
+                <span
+                    data-ne="वेबसाइट विकास"
+                    data-en="Website Development">
+
+                    वेबसाइट विकास
+
+                </span>
+
+            </a>
+
+
+            <a href="projects.html">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                <span
+                    data-ne="प्रोजेक्टहरू"
+                    data-en="Projects">
+
+                    प्रोजेक्टहरू
+
+                </span>
+
+            </a>
+
+
+            <a href="clients.html">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span
+                    data-ne="क्लाइन्टहरू"
+                    data-en="Clients">
+
+                    क्लाइन्टहरू
+
+                </span>
+
+            </a>
+
+
+            <a href="services.html">
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                <span
+                    data-ne="सेवाहरू"
+                    data-en="Services">
+
+                    सेवाहरू
+
+                </span>
+
+            </a>
+
+
+            <a href="analytics.html">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span
+                    data-ne="विश्लेषण"
+                    data-en="Analytics">
+
+                    विश्लेषण
+
+                </span>
+
+            </a>
+
+
+            <a href="profile.html">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span
+                    data-ne="प्रोफाइल"
+                    data-en="Profile">
+
+                    प्रोफाइल
+
+                </span>
+
+            </a>
+
+
+            <a href="settings.html">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span
+                    data-ne="सेटिङ"
+                    data-en="Settings">
+
+                    सेटिङ
+
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- SIDEBAR USER -->
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-user">
+
+                <div
+                    class="user-avatar"
+                    id="sidebarAvatar">
+
+                    TB
+
+                </div>
+
+                <div class="user-details">
+
+                    <strong id="sidebarName">
+                        टेकबहादुर बिक
+                    </strong>
+
+                    <small id="sidebarRole">
+                        Premium Member
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="logout-btn"
+                id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span
+                    data-ne="लगआउट"
+                    data-en="Logout">
+
+                    लगआउट
+
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MOBILE SIDEBAR OVERLAY
+    ====================================================== -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay">
+    </div>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <div class="topbar-left">
+
+
+                <!-- MOBILE MENU -->
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+                <div class="page-heading">
+
+                    <span
+                        class="page-eyebrow"
+                        data-ne="डिजिटल समाधान"
+                        data-en="Digital Solutions">
+
+                        डिजिटल समाधान
+
+                    </span>
+
+                    <h1
+                        data-ne="वेबसाइट विकास"
+                        data-en="Website Development">
+
+                        वेबसाइट विकास
+
+                    </h1>
+
+                    <p
+                        data-ne="आफ्ना वेबसाइट प्रोजेक्टहरू व्यवस्थापन गर्नुहोस्।"
+                        data-en="Manage and monitor your website projects.">
+
+                        आफ्ना वेबसाइट प्रोजेक्टहरू व्यवस्थापन गर्नुहोस्।
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+
+                <!-- SEARCH -->
+                <div class="topbar-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="search"
+                        id="globalWebsiteSearch"
+                        placeholder="वेबसाइट खोज्नुहोस्..."
+                        data-placeholder-ne="वेबसाइट खोज्नुहोस्..."
+                        data-placeholder-en="Search websites..."
+                        autocomplete="off">
+
+                </div>
+
+
+                <!-- LANGUAGE -->
+                <button
+                    type="button"
+                    class="topbar-btn"
+                    id="languageBtn"
+                    aria-label="Change language">
+
+                    <i class="fa-solid fa-language"></i>
+
+                    <span id="currentLanguage">
+                        नेपाली
+                    </span>
+
+                </button>
+
+
+                <!-- THEME -->
+                <button
+                    type="button"
+                    class="topbar-btn icon-only"
+                    id="themeBtn"
+                    aria-label="Toggle theme">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+                <!-- NOTIFICATION -->
+                <button
+                    type="button"
+                    class="topbar-btn notification-btn"
+                    id="notificationBtn"
+                    aria-label="Notifications">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span
+                        class="notification-badge"
+                        id="notificationBadge">
+
+                        0
+
+                    </span>
+
+                </button>
+
+
+                <!-- MINI PROFILE -->
+                <div class="mini-profile">
+
+                    <div
+                        class="mini-avatar"
+                        id="miniAvatar">
+
+                        TB
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             PAGE ACTION BAR
+        ================================================== -->
+
+        <section class="page-action-bar">
+
+
+            <div class="action-intro">
+
+                <div class="action-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </div>
+
+                <div>
+
+                    <h2
+                        data-ne="Website Projects"
+                        data-en="Website Projects">
+
+                        Website Projects
+
+                    </h2>
+
+                    <p
+                        data-ne="वेबसाइट निर्माणको सम्पूर्ण काम एकै ठाउँमा व्यवस्थापन गर्नुहोस्।"
+                        data-en="Manage your complete website development workflow in one place.">
+
+                        वेबसाइट निर्माणको सम्पूर्ण काम एकै ठाउँमा व्यवस्थापन गर्नुहोस्।
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="page-actions">
+
+                <button
+                    type="button"
+                    class="secondary-action-btn"
+                    id="exportWebsitesBtn">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    <span
+                        data-ne="Export"
+                        data-en="Export">
+
+                        Export
+
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="primary-action-btn"
+                    id="addWebsiteBtn">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    <span
+                        data-ne="नयाँ वेबसाइट"
+                        data-en="New Website">
+
+                        नयाँ वेबसाइट
+
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             STATISTICS
+        ================================================== -->
+
+        <section
+            class="website-stats"
+            id="websiteStats">
+
+
+            <!-- TOTAL -->
+            <article class="stat-card">
+
+                <div class="stat-icon blue">
+
+                    <i class="fa-solid fa-globe"></i>
+
+                </div>
+
+                <div class="stat-content">
+
+                    <span
+                        data-ne="कुल वेबसाइट"
+                        data-en="Total Websites">
+
+                        कुल वेबसाइट
+
+                    </span>
+
+                    <strong id="totalWebsites">
+                        0
+                    </strong>
+
+                    <small
+                        data-ne="सबै वेबसाइट प्रोजेक्ट"
+                        data-en="All website projects">
+
+                        सबै वेबसाइट प्रोजेक्ट
+
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <!-- PLANNING -->
+            <article class="stat-card">
+
+                <div class="stat-icon purple">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+                <div class="stat-content">
+
+                    <span
+                        data-ne="योजना"
+                        data-en="Planning">
+
+                        योजना
+
+                    </span>
+
+                    <strong id="planningWebsites">
+                        0
+                    </strong>
+
+                    <small
+                        data-ne="सुरु हुन बाँकी"
+                        data-en="Waiting to start">
+
+                        सुरु हुन बाँकी
+
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <!-- IN PROGRESS -->
+            <article class="stat-card">
+
+                <div class="stat-icon orange">
+
+                    <i class="fa-solid fa-spinner"></i>
+
+                </div>
+
+                <div class="stat-content">
+
+                    <span
+                        data-ne="निर्माण हुँदै"
+                        data-en="In Progress">
+
+                        निर्माण हुँदै
+
+                    </span>
+
+                    <strong id="activeWebsites">
+                        0
+                    </strong>
+
+                    <small
+                        data-ne="हाल काम भइरहेको"
+                        data-en="Currently active">
+
+                        हाल काम भइरहेको
+
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <!-- COMPLETED -->
+            <article class="stat-card">
+
+                <div class="stat-icon green">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div class="stat-content">
+
+                    <span
+                        data-ne="सम्पन्न"
+                        data-en="Completed">
+
+                        सम्पन्न
+
+                    </span>
+
+                    <strong id="completedWebsites">
+                        0
+                    </strong>
+
+                    <small
+                        data-ne="सफलतापूर्वक सम्पन्न"
+                        data-en="Successfully completed">
+
+                        सफलतापूर्वक सम्पन्न
+
+                    </small>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             TOOLBAR
+        ================================================== -->
+
+        <section class="website-toolbar">
+
+
+            <div class="toolbar-left">
+
+
+                <div class="toolbar-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="search"
+                        id="websiteSearch"
+                        placeholder="Website खोज्नुहोस्..."
+                        data-placeholder-ne="Website खोज्नुहोस्..."
+                        data-placeholder-en="Search website..."
+                        autocomplete="off">
+
+                </div>
+
+
+                <select
+                    id="statusFilter"
+                    class="toolbar-select"
+                    aria-label="Filter by status">
+
+                    <option
+                        value="all"
+                        data-ne="सबै Status"
+                        data-en="All Status">
+
+                        सबै Status
+
+                    </option>
+
+                    <option
+                        value="planning"
+                        data-ne="योजना"
+                        data-en="Planning">
+
+                        योजना
+
+                    </option>
+
+                    <option
+                        value="in-progress"
+                        data-ne="निर्माण हुँदै"
+                        data-en="In Progress">
+
+                        निर्माण हुँदै
+
+                    </option>
+
+                    <option
+                        value="completed"
+                        data-ne="सम्पन्न"
+                        data-en="Completed">
+
+                        सम्पन्न
+
+                    </option>
+
+                    <option
+                        value="on-hold"
+                        data-ne="रोकिएको"
+                        data-en="On Hold">
+
+                        रोकिएको
+
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="sortWebsites"
+                    class="toolbar-select"
+                    aria-label="Sort websites">
+
+                    <option
+                        value="newest"
+                        data-ne="नयाँ पहिले"
+                        data-en="Newest First">
+
+                        नयाँ पहिले
+
+                    </option>
+
+                    <option
+                        value="oldest"
+                        data-ne="पुरानो पहिले"
+                        data-en="Oldest First">
+
+                        पुरानो पहिले
+
+                    </option>
+
+                    <option
+                        value="name"
+                        data-ne="नाम अनुसार"
+                        data-en="By Name">
+
+                        नाम अनुसार
+
+                    </option>
+
+                    <option
+                        value="progress"
+                        data-ne="Progress अनुसार"
+                        data-en="By Progress">
+
+                        Progress अनुसार
+
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="toolbar-right">
+
+                <span id="websiteResultCount">
+                    0 Websites
+                </span>
+
+                <button
+                    type="button"
+                    class="view-toggle active"
+                    id="gridViewBtn"
+                    aria-label="Grid view">
+
+                    <i class="fa-solid fa-grip"></i>
+
+                </button>
+
+                <button
+                    type="button"
+                    class="view-toggle"
+                    id="listViewBtn"
+                    aria-label="List view">
+
+                    <i class="fa-solid fa-list"></i>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             WEBSITE PROJECT CONTAINER
+        ================================================== -->
+
+        <section
+            class="website-container"
+            id="websiteContainer">
+
+
+            <!-- WEBSITE CARDS WILL BE GENERATED BY JS -->
+
+        </section>
+
+
+
+        <!-- =================================================
+             EMPTY STATE
+        ================================================== -->
+
+        <section
+            class="website-empty-state"
+            id="websiteEmptyState"
+            hidden>
+
+            <div class="empty-icon">
+
+                <i class="fa-solid fa-globe"></i>
+
+            </div>
+
+            <h2
+                data-ne="कुनै वेबसाइट भेटिएन"
+                data-en="No websites found">
+
+                कुनै वेबसाइट भेटिएन
+
+            </h2>
+
+            <p
+                data-ne="नयाँ वेबसाइट प्रोजेक्ट थपेर सुरु गर्नुहोस्।"
+                data-en="Start by adding your first website project.">
+
+                नयाँ वेबसाइट प्रोजेक्ट थपेर सुरु गर्नुहोस्।
+
+            </p>
+
+            <button
+                type="button"
+                class="primary-action-btn"
+                id="emptyAddWebsiteBtn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                <span
+                    data-ne="नयाँ वेबसाइट थप्नुहोस्"
+                    data-en="Add New Website">
+
+                    नयाँ वेबसाइट थप्नुहोस्
+
+                </span>
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================================
+             WEBSITE MODAL
+        ================================================== -->
+
+        <div
+            class="modal-overlay"
+            id="websiteModal"
+            aria-hidden="true">
+
+
+            <div
+                class="website-modal"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="websiteModalTitle">
+
+
+                <!-- MODAL HEADER -->
+
+                <div class="modal-header">
+
+                    <div class="modal-title">
+
+                        <div class="modal-title-icon">
+
+                            <i class="fa-solid fa-globe"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h2 id="websiteModalTitle">
+
+                                नयाँ वेबसाइट
+
+                            </h2>
+
+                            <p
+                                data-ne="वेबसाइट प्रोजेक्टको विवरण भर्नुहोस्।"
+                                data-en="Enter your website project details.">
+
+                                वेबसाइट प्रोजेक्टको विवरण भर्नुहोस्।
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="modal-close"
+                        id="closeWebsiteModal"
+                        aria-label="Close">
+
+                        <i class="fa-solid fa-xmark"></i>
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- MODAL FORM -->
+
+                <form
+                    id="websiteForm"
+                    autocomplete="off">
+
+
+                    <input
+                        type="hidden"
+                        id="websiteId">
+
+
+                    <!-- PROJECT NAME -->
+
+                    <div class="form-group">
+
+                        <label for="websiteName">
+
+                            <span
+                                data-ne="वेबसाइट नाम"
+                                data-en="Website Name">
+
+                                वेबसाइट नाम
+
+                            </span>
+
+                            <b>*</b>
+
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-globe"></i>
+
+                            <input
+                                type="text"
+                                id="websiteName"
+                                name="websiteName"
+                                placeholder="जस्तै: BARIWAY Digital Hub"
+                                data-placeholder-ne="जस्तै: BARIWAY Digital Hub"
+                                data-placeholder-en="e.g. BARIWAY Digital Hub"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CLIENT -->
+
+                    <div class="form-row">
+
+
+                        <div class="form-group">
+
+                            <label for="websiteClient">
+
+                                <span
+                                    data-ne="क्लाइन्ट"
+                                    data-en="Client">
+
+                                    क्लाइन्ट
+
+                                </span>
+
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-solid fa-user"></i>
+
+                                <input
+                                    type="text"
+                                    id="websiteClient"
+                                    name="websiteClient"
+                                    placeholder="क्लाइन्टको नाम"
+                                    data-placeholder-ne="क्लाइन्टको नाम"
+                                    data-placeholder-en="Client name">
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CATEGORY -->
+
+                        <div class="form-group">
+
+                            <label for="websiteCategory">
+
+                                <span
+                                    data-ne="Category"
+                                    data-en="Category">
+
+                                    Category
+
+                                </span>
+
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-solid fa-layer-group"></i>
+
+                                <select
+                                    id="websiteCategory"
+                                    name="websiteCategory">
+
+                                    <option
+                                        value="business"
+                                        data-ne="Business Website"
+                                        data-en="Business Website">
+
+                                        Business Website
+
+                                    </option>
+
+                                    <option
+                                        value="portfolio"
+                                        data-ne="Portfolio"
+                                        data-en="Portfolio">
+
+                                        Portfolio
+
+                                    </option>
+
+                                    <option
+                                        value="ecommerce"
+                                        data-ne="E-Commerce"
+                                        data-en="E-Commerce">
+
+                                        E-Commerce
+
+                                    </option>
+
+                                    <option
+                                        value="blog"
+                                        data-ne="Blog / News"
+                                        data-en="Blog / News">
+
+                                        Blog / News
+
+                                    </option>
+
+                                    <option
+                                        value="education"
+                                        data-ne="Education"
+                                        data-en="Education">
+
+                                        Education
+
+                                    </option>
+
+                                    <option
+                                        value="other"
+                                        data-ne="अन्य"
+                                        data-en="Other">
+
+                                        अन्य
+
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STATUS + PROGRESS -->
+
+                    <div class="form-row">
+
+
+                        <div class="form-group">
+
+                            <label for="websiteStatus">
+
+                                <span
+                                    data-ne="स्थिति"
+                                    data-en="Status">
+
+                                    स्थिति
+
+                                </span>
+
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-solid fa-flag"></i>
+
+                                <select
+                                    id="websiteStatus"
+                                    name="websiteStatus">
+
+                                    <option
+                                        value="planning"
+                                        data-ne="योजना"
+                                        data-en="Planning">
+
+                                        योजना
+
+                                    </option>
+
+                                    <option
+                                        value="in-progress"
+                                        data-ne="निर्माण हुँदै"
+                                        data-en="In Progress">
+
+                                        निर्माण हुँदै
+
+                                    </option>
+
+                                    <option
+                                        value="completed"
+                                        data-ne="सम्पन्न"
+                                        data-en="Completed">
+
+                                        सम्पन्न
+
+                                    </option>
+
+                                    <option
+                                        value="on-hold"
+                                        data-ne="रोकिएको"
+                                        data-en="On Hold">
+
+                                        रोकिएको
+
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="websiteProgress">
+
+                                <span
+                                    data-ne="Progress (%)"
+                                    data-en="Progress (%)">
+
+                                    Progress (%)
+
+                                </span>
+
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-solid fa-chart-line"></i>
+
+                                <input
+                                    type="number"
+                                    id="websiteProgress"
+                                    name="websiteProgress"
+                                    min="0"
+                                    max="100"
+                                    value="0"
+                                    placeholder="0 - 100">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- START DATE + DEADLINE -->
+
+                    <div class="form-row">
+
+
+                        <div class="form-group">
+
+                            <label for="websiteStartDate">
+
+                                <span
+                                    data-ne="सुरु मिति"
+                                    data-en="Start Date">
+
+                                    सुरु मिति
+
+                                </span>
+
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-solid fa-calendar-days"></i>
+
+                                <input
+                                    type="date"
+                                    id="websiteStartDate"
+                                    name="websiteStartDate">
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="websiteDeadline">
+
+                                <span
+                                    data-ne="Deadline"
+                                    data-en="Deadline">
+
+                                    Deadline
+
+                                </span>
+
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-solid fa-calendar-check"></i>
+
+                                <input
+                                    type="date"
+                                    id="websiteDeadline"
+                                    name="websiteDeadline">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- WEBSITE URL -->
+
+                    <div class="form-group">
+
+                        <label for="websiteUrl">
+
+                            <span
+                                data-ne="Website URL"
+                                data-en="Website URL">
+
+                                Website URL
+
+                            </span>
+
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-link"></i>
+
+                            <input
+                                type="url"
+                                id="websiteUrl"
+                                name="websiteUrl"
+                                placeholder="https://example.com"
+                                data-placeholder-ne="https://example.com"
+                                data-placeholder-en="https://example.com">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TECHNOLOGIES -->
+
+                    <div class="form-group">
+
+                        <label for="websiteTechnologies">
+
+                            <span
+                                data-ne="Technology"
+                                data-en="Technologies">
+
+                                Technology
+
+                            </span>
+
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="fa-solid fa-code"></i>
+
+                            <input
+                                type="text"
+                                id="websiteTechnologies"
+                                name="websiteTechnologies"
+                                placeholder="HTML, CSS, JavaScript"
+                                data-placeholder-ne="HTML, CSS, JavaScript"
+                                data-placeholder-en="HTML, CSS, JavaScript">
+
+                        </div>
+
+                        <small
+                            class="field-help"
+                            data-ne="Comma (,) प्रयोग गरेर Technology छुट्याउनुहोस्।"
+                            data-en="Separate technologies using commas.">
+
+                            Comma (,) प्रयोग गरेर Technology छुट्याउनुहोस्।
+
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- DESCRIPTION -->
+
+                    <div class="form-group">
+
+                        <label for="websiteDescription">
+
+                            <span
+                                data-ne="विवरण"
+                                data-en="Description">
+
+                                विवरण
+
+                            </span>
+
+                        </label>
+
+                        <textarea
+                            id="websiteDescription"
+                            name="websiteDescription"
+                            rows="4"
+                            placeholder="वेबसाइट प्रोजेक्टको छोटो विवरण..."
+                            data-placeholder-ne="वेबसाइट प्रोजेक्टको छोटो विवरण..."
+                            data-placeholder-en="Short description of the website project..."></textarea>
+
+                    </div>
+
+
+
+                    <!-- MODAL ACTIONS -->
+
+                    <div class="modal-actions">
+
+                        <button
+                            type="button"
+                            class="modal-cancel-btn"
+                            id="cancelWebsiteBtn">
+
+                            <i class="fa-solid fa-xmark"></i>
+
+                            <span
+                                data-ne="रद्द गर्नुहोस्"
+                                data-en="Cancel">
+
+                                रद्द गर्नुहोस्
+
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="modal-save-btn"
+                            id="saveWebsiteBtn">
+
+                            <i class="fa-solid fa-floppy-disk"></i>
+
+                            <span
+                                data-ne="वेबसाइट सुरक्षित गर्नुहोस्"
+                                data-en="Save Website">
+
+                                वेबसाइट सुरक्षित गर्नुहोस्
+
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             NOTIFICATION PANEL
+        ================================================== -->
+
+        <div
+            class="notification-panel"
+            id="notificationPanel"
+            aria-hidden="true">
+
+
+            <div class="notification-panel-header">
+
+                <div>
+
+                    <h3
+                        data-ne="सूचनाहरू"
+                        data-en="Notifications">
+
+                        सूचनाहरू
+
+                    </h3>
+
+                    <span id="notificationCountText">
+                        0
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="clearNotificationsBtn">
+
+                    <i class="fa-solid fa-check-double"></i>
+
+                    <span
+                        data-ne="सबै पढिएको"
+                        data-en="Mark all read">
+
+                        सबै पढिएको
+
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <div
+                class="notification-list"
+                id="notificationList">
+
+                <!-- Notifications rendered by JS -->
+
+            </div>
+
+
+            <div
+                class="notification-empty"
+                id="notificationEmpty">
+
+                <i class="fa-regular fa-bell-slash"></i>
+
+                <p
+                    data-ne="अहिले कुनै सूचना छैन।"
+                    data-en="No notifications right now.">
+
+                    अहिले कुनै सूचना छैन।
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CONFIRM MODAL
+        ================================================== -->
+
+        <div
+            class="modal-overlay confirm-overlay"
+            id="confirmModal"
+            aria-hidden="true">
+
+
+            <div
+                class="confirm-modal"
+                role="dialog"
+                aria-modal="true">
+
+
+                <div class="confirm-icon">
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                </div>
+
+
+                <h3 id="confirmTitle">
+
+                    Delete Website?
+
+                </h3>
+
+
+                <p id="confirmMessage">
+
+                    Are you sure you want to delete this website?
+
+                </p>
+
+
+                <div class="confirm-actions">
+
+                    <button
+                        type="button"
+                        class="modal-cancel-btn"
+                        id="confirmCancelBtn">
+
+                        <span
+                            data-ne="रद्द गर्नुहोस्"
+                            data-en="Cancel">
+
+                            रद्द गर्नुहोस्
+
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="danger-confirm-btn"
+                        id="confirmDeleteBtn">
+
+                        <i class="fa-solid fa-trash-can"></i>
+
+                        <span
+                            data-ne="Delete"
+                            data-en="Delete">
+
+                            Delete
+
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             TOAST
+        ================================================== -->
+
+        <div
+            class="website-toast"
+            id="websiteToast"
+            role="status"
+            aria-live="polite">
+
+            <i
+                class="fa-solid fa-circle-check"
+                id="toastIcon">
+            </i>
+
+            <span id="toastMessage">
+                Success
+            </span>
+
+        </div>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+            <span>
+                © 2026
+            </span>
+
+            <strong>
+                BARIWAY DIGITAL HUB
+            </strong>
+
+            <span>
+                —
+            </span>
+
+            <span
+                data-ne="From Nepal To The World"
+                data-en="From Nepal To The World">
+
+                From Nepal To The World
+
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     WEBSITE JAVASCRIPT
+====================================================== -->
+
+<script src="js/website.js"></script>
+
+
+</body>
+
+</html>

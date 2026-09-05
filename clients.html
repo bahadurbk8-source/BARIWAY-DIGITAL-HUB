@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="ne">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>BARIWAY DIGITAL HUB | Clients</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Clients CSS -->
+    <link rel="stylesheet"
+        href="css/clients.css">
+
+</head>
+
+
+<body>
+
+<div class="clients-page">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <div class="logo-box">
+                B
+            </div>
+
+            <div>
+                <h2>BARIWAY</h2>
+                <span>DIGITAL HUB</span>
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html">
+                <i class="fa-solid fa-gauge-high"></i>
+                <span data-ne="ड्यासबोर्ड"
+                      data-en="Dashboard">
+                    ड्यासबोर्ड
+                </span>
+            </a>
+
+
+            <a href="website.html">
+                <i class="fa-solid fa-globe"></i>
+                <span data-ne="वेबसाइट विकास"
+                      data-en="Website Development">
+                    वेबसाइट विकास
+                </span>
+            </a>
+
+
+            <a href="projects.html">
+                <i class="fa-solid fa-folder-open"></i>
+                <span data-ne="प्रोजेक्टहरू"
+                      data-en="Projects">
+                    प्रोजेक्टहरू
+                </span>
+            </a>
+
+
+            <a href="clients.html"
+               class="active">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span data-ne="क्लाइन्टहरू"
+                      data-en="Clients">
+                    क्लाइन्टहरू
+                </span>
+
+            </a>
+
+
+            <a href="services.html">
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                <span data-ne="सेवाहरू"
+                      data-en="Services">
+                    सेवाहरू
+                </span>
+
+            </a>
+
+
+            <a href="analytics.html">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span data-ne="विश्लेषण"
+                      data-en="Analytics">
+                    विश्लेषण
+                </span>
+
+            </a>
+
+
+            <a href="settings.html">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span data-ne="सेटिङ"
+                      data-en="Settings">
+                    सेटिङ
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Bottom -->
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-user">
+
+                <div class="user-avatar">
+                    TB
+                </div>
+
+                <div>
+
+                    <strong>
+                        टेकबहादुर बिक
+                    </strong>
+
+                    <small>
+                        Premium Member
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="logout-btn"
+                id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span data-ne="लगआउट"
+                      data-en="Logout">
+                    लगआउट
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1
+                    data-ne="क्लाइन्ट व्यवस्थापन"
+                    data-en="Client Management">
+
+                    क्लाइन्ट व्यवस्थापन
+
+                </h1>
+
+                <p
+                    data-ne="आफ्ना सबै क्लाइन्टहरू व्यवस्थित गर्नुहोस्।"
+                    data-en="Manage all your clients in one place.">
+
+                    आफ्ना सबै क्लाइन्टहरू व्यवस्थित गर्नुहोस्।
+
+                </p>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+
+                <!-- Language -->
+
+                <button
+                    class="topbar-btn"
+                    id="languageBtn">
+
+                    <i class="fa-solid fa-language"></i>
+
+                    <span id="currentLanguage">
+                        नेपाली
+                    </span>
+
+                </button>
+
+
+                <!-- Theme -->
+
+                <button
+                    class="topbar-btn"
+                    id="themeBtn">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+                <!-- Profile -->
+
+                <div class="mini-profile">
+
+                    <div class="mini-avatar">
+                        TB
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             STATS
+        ================================================== -->
+
+        <section class="client-stats">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <div>
+
+                    <span
+                        data-ne="कुल क्लाइन्ट"
+                        data-en="Total Clients">
+
+                        कुल क्लाइन्ट
+
+                    </span>
+
+                    <strong id="totalClients">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon active-icon">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+
+                <div>
+
+                    <span
+                        data-ne="सक्रिय"
+                        data-en="Active">
+
+                        सक्रिय
+
+                    </span>
+
+                    <strong id="activeClients">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon pending-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <div>
+
+                    <span
+                        data-ne="प्रतीक्षामा"
+                        data-en="Pending">
+
+                        प्रतीक्षामा
+
+                    </span>
+
+                    <strong id="pendingClients">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon completed-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div>
+
+                    <span
+                        data-ne="पूरा भएका"
+                        data-en="Completed">
+
+                        पूरा भएका
+
+                    </span>
+
+                    <strong id="completedClients">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CLIENT TOOLBAR
+        ================================================== -->
+
+        <section class="client-toolbar">
+
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="search"
+                    id="clientSearch"
+                    placeholder="क्लाइन्ट खोज्नुहोस्..."
+                    data-placeholder-ne="क्लाइन्ट खोज्नुहोस्..."
+                    data-placeholder-en="Search clients...">
+
+            </div>
+
+
+            <select id="statusFilter">
+
+                <option
+                    value="all"
+                    data-ne="सबै Status"
+                    data-en="All Status">
+
+                    सबै Status
+
+                </option>
+
+                <option
+                    value="active"
+                    data-ne="सक्रिय"
+                    data-en="Active">
+
+                    सक्रिय
+
+                </option>
+
+                <option
+                    value="pending"
+                    data-ne="प्रतीक्षामा"
+                    data-en="Pending">
+
+                    प्रतीक्षामा
+
+                </option>
+
+                <option
+                    value="completed"
+                    data-ne="पूरा"
+                    data-en="Completed">
+
+                    पूरा
+
+                </option>
+
+            </select>
+
+
+            <button
+                class="add-client-btn"
+                id="addClientBtn">
+
+                <i class="fa-solid fa-plus"></i>
+
+                <span
+                    data-ne="नयाँ क्लाइन्ट"
+                    data-en="Add Client">
+
+                    नयाँ क्लाइन्ट
+
+                </span>
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CLIENT TABLE
+        ================================================== -->
+
+        <section class="client-card">
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2
+                        data-ne="क्लाइन्ट सूची"
+                        data-en="Client List">
+
+                        क्लाइन्ट सूची
+
+                    </h2>
+
+                    <p
+                        data-ne="तपाईंका सबै क्लाइन्टहरूको विवरण"
+                        data-en="Details of all your clients">
+
+                        तपाईंका सबै क्लाइन्टहरूको विवरण
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th
+                                data-ne="क्लाइन्ट"
+                                data-en="Client">
+                                क्लाइन्ट
+                            </th>
+
+                            <th
+                                data-ne="सम्पर्क"
+                                data-en="Contact">
+                                सम्पर्क
+                            </th>
+
+                            <th
+                                data-ne="प्रोजेक्ट"
+                                data-en="Project">
+                                प्रोजेक्ट
+                            </th>
+
+                            <th
+                                data-ne="Status"
+                                data-en="Status">
+                                Status
+                            </th>
+
+                            <th
+                                data-ne="कार्य"
+                                data-en="Actions">
+                                कार्य
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="clientTableBody">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+            © 2026
+            <strong>BARIWAY DIGITAL HUB</strong>
+
+            —
+            <span
+                data-ne="From Nepal To The World"
+                data-en="From Nepal To The World">
+
+                From Nepal To The World
+
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+
+<!-- =====================================================
+     ADD / EDIT CLIENT MODAL
+====================================================== -->
+
+<div
+    class="modal-overlay"
+    id="clientModal">
+
+    <div class="client-modal">
+
+
+        <div class="modal-header">
+
+            <div>
+
+                <h2
+                    id="modalTitle"
+                    data-ne="नयाँ क्लाइन्ट थप्नुहोस्"
+                    data-en="Add New Client">
+
+                    नयाँ क्लाइन्ट थप्नुहोस्
+
+                </h2>
+
+                <p
+                    data-ne="क्लाइन्टको विवरण भर्नुहोस्"
+                    data-en="Enter client information">
+
+                    क्लाइन्टको विवरण भर्नुहोस्
+
+                </p>
+
+            </div>
+
+
+            <button
+                class="modal-close"
+                id="closeModal">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <form id="clientForm">
+
+
+            <input
+                type="hidden"
+                id="clientId">
+
+
+            <div class="form-group">
+
+                <label
+                    data-ne="क्लाइन्टको नाम"
+                    data-en="Client Name">
+
+                    क्लाइन्टको नाम
+
+                </label>
+
+                <input
+                    type="text"
+                    id="clientName"
+                    required
+                    placeholder="नाम लेख्नुहोस्">
+
+            </div>
+
+
+            <div class="form-row">
+
+
+                <div class="form-group">
+
+                    <label
+                        data-ne="Email"
+                        data-en="Email">
+
+                        Email
+
+                    </label>
+
+                    <input
+                        type="email"
+                        id="clientEmail"
+                        required
+                        placeholder="example@email.com">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label
+                        data-ne="फोन"
+                        data-en="Phone">
+
+                        फोन
+
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="clientPhone"
+                        placeholder="+977">
+
+                </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+
+                <div class="form-group">
+
+                    <label
+                        data-ne="प्रोजेक्ट"
+                        data-en="Project">
+
+                        प्रोजेक्ट
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="clientProject"
+                        placeholder="Project name">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label
+                        data-ne="Status"
+                        data-en="Status">
+
+                        Status
+
+                    </label>
+
+                    <select id="clientStatus">
+
+                        <option value="active">
+                            Active
+                        </option>
+
+                        <option value="pending">
+                            Pending
+                        </option>
+
+                        <option value="completed">
+                            Completed
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label
+                    data-ne="ठेगाना"
+                    data-en="Address">
+
+                    ठेगाना
+
+                </label>
+
+                <input
+                    type="text"
+                    id="clientAddress"
+                    placeholder="City / Address">
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="cancel-btn"
+                    id="cancelClient">
+
+                    <span
+                        data-ne="रद्द गर्नुहोस्"
+                        data-en="Cancel">
+
+                        रद्द गर्नुहोस्
+
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="save-client-btn">
+
+                    <i class="fa-solid fa-floppy-disk"></i>
+
+                    <span
+                        data-ne="Save Client"
+                        data-en="Save Client">
+
+                        Save Client
+
+                    </span>
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- Clients JS -->
+
+<script src="js/clients.js"></script>
+
+</body>
+
+</html>

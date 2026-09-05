@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="ne">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="BARIWAY DIGITAL HUB - Analytics & Reports">
+
+    <meta name="theme-color"
+          content="#2563eb">
+
+    <title>BARIWAY DIGITAL HUB | Analytics</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         CHART.JS
+    ====================================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <!-- =====================================================
+         ANALYTICS CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="css/analytics.css">
+
+</head>
+
+
+<body>
+
+<div class="analytics-page">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <!-- BRAND -->
+
+        <div class="sidebar-logo">
+
+            <div class="logo-box">
+                B
+            </div>
+
+            <div class="logo-text">
+
+                <h2>BARIWAY</h2>
+
+                <span>DIGITAL HUB</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-nav"
+             aria-label="Main Navigation">
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-gauge-high"></i>
+
+                <span
+                    data-ne="ड्यासबोर्ड"
+                    data-en="Dashboard">
+                    ड्यासबोर्ड
+                </span>
+
+            </a>
+
+
+            <a href="website.html">
+
+                <i class="fa-solid fa-globe"></i>
+
+                <span
+                    data-ne="वेबसाइट विकास"
+                    data-en="Website Development">
+                    वेबसाइट विकास
+                </span>
+
+            </a>
+
+
+            <a href="projects.html">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                <span
+                    data-ne="प्रोजेक्टहरू"
+                    data-en="Projects">
+                    प्रोजेक्टहरू
+                </span>
+
+            </a>
+
+
+            <a href="clients.html">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span
+                    data-ne="क्लाइन्टहरू"
+                    data-en="Clients">
+                    क्लाइन्टहरू
+                </span>
+
+            </a>
+
+
+            <a href="services.html">
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                <span
+                    data-ne="सेवाहरू"
+                    data-en="Services">
+                    सेवाहरू
+                </span>
+
+            </a>
+
+
+            <a href="analytics.html"
+               class="active"
+               aria-current="page">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span
+                    data-ne="विश्लेषण"
+                    data-en="Analytics">
+                    विश्लेषण
+                </span>
+
+            </a>
+
+
+            <a href="profile.html">
+
+                <i class="fa-solid fa-user"></i>
+
+                <span
+                    data-ne="प्रोफाइल"
+                    data-en="Profile">
+                    प्रोफाइल
+                </span>
+
+            </a>
+
+
+            <a href="settings.html">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span
+                    data-ne="सेटिङ"
+                    data-en="Settings">
+                    सेटिङ
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- SIDEBAR USER -->
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-user">
+
+                <div class="user-avatar"
+                     id="sidebarAvatar">
+                    TB
+                </div>
+
+                <div class="user-details">
+
+                    <strong id="sidebarName">
+                        टेकबहादुर बिक
+                    </strong>
+
+                    <small id="sidebarRole">
+                        Premium Member
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <button type="button"
+                    class="logout-btn"
+                    id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span
+                    data-ne="लगआउट"
+                    data-en="Logout">
+                    लगआउट
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div class="sidebar-overlay"
+         id="sidebarOverlay">
+    </div>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button type="button"
+                        class="mobile-menu-btn"
+                        id="mobileMenuBtn"
+                        aria-label="Open menu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+                <div class="page-heading">
+
+                    <span class="page-eyebrow"
+                          data-ne="रिपोर्ट तथा तथ्याङ्क"
+                          data-en="Reports & Statistics">
+                        रिपोर्ट तथा तथ्याङ्क
+                    </span>
+
+                    <h1
+                        data-ne="विश्लेषण"
+                        data-en="Analytics">
+                        विश्लेषण
+                    </h1>
+
+                    <p
+                        data-ne="तपाईंको डिजिटल व्यवसायको प्रगति र तथ्याङ्क हेर्नुहोस्।"
+                        data-en="Monitor your digital business performance and statistics.">
+                        तपाईंको डिजिटल व्यवसायको प्रगति र तथ्याङ्क हेर्नुहोस्।
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+
+                <!-- SEARCH -->
+
+                <div class="topbar-search">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="search"
+                        id="analyticsSearch"
+                        autocomplete="off"
+                        placeholder="खोज्नुहोस्..."
+                        data-placeholder-ne="खोज्नुहोस्..."
+                        data-placeholder-en="Search...">
+
+                </div>
+
+
+                <!-- LANGUAGE -->
+
+                <button type="button"
+                        class="topbar-btn"
+                        id="languageBtn"
+                        aria-label="Change language">
+
+                    <i class="fa-solid fa-language"></i>
+
+                    <span id="currentLanguage">
+                        नेपाली
+                    </span>
+
+                </button>
+
+
+                <!-- THEME -->
+
+                <button type="button"
+                        class="topbar-btn icon-only"
+                        id="themeBtn"
+                        aria-label="Toggle theme">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+                <!-- NOTIFICATIONS -->
+
+                <button type="button"
+                        class="topbar-btn notification-btn"
+                        id="notificationBtn"
+                        aria-label="Notifications">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span class="notification-badge"
+                          id="notificationBadge">
+                        0
+                    </span>
+
+                </button>
+
+
+                <!-- PROFILE -->
+
+                <div class="mini-profile">
+
+                    <div class="mini-avatar"
+                         id="miniAvatar">
+                        TB
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             ANALYTICS HEADER
+        ================================================== -->
+
+        <section class="analytics-header">
+
+            <div class="analytics-title">
+
+                <div class="analytics-title-icon">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                </div>
+
+                <div>
+
+                    <h2
+                        data-ne="Business Overview"
+                        data-en="Business Overview">
+                        Business Overview
+                    </h2>
+
+                    <p
+                        data-ne="तपाईंको वेबसाइट, प्रोजेक्ट र क्लाइन्टको समग्र अवस्था।"
+                        data-en="Overall status of your websites, projects and clients.">
+                        तपाईंको वेबसाइट, प्रोजेक्ट र क्लाइन्टको समग्र अवस्था।
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="analytics-actions">
+
+                <button
+                    type="button"
+                    class="secondary-action-btn"
+                    id="refreshAnalyticsBtn">
+
+                    <i class="fa-solid fa-arrows-rotate"></i>
+
+                    <span
+                        data-ne="Refresh"
+                        data-en="Refresh">
+                        Refresh
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="primary-action-btn"
+                    id="exportAnalyticsBtn">
+
+                    <i class="fa-solid fa-file-export"></i>
+
+                    <span
+                        data-ne="रिपोर्ट Export"
+                        data-en="Export Report">
+                        रिपोर्ट Export
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             STATISTICS
+        ================================================== -->
+
+        <section class="analytics-stats">
+
+
+            <!-- WEBSITES -->
+
+            <article class="analytics-stat-card">
+
+                <div class="analytics-stat-icon blue">
+
+                    <i class="fa-solid fa-globe"></i>
+
+                </div>
+
+                <div>
+
+                    <span
+                        data-ne="कुल वेबसाइट"
+                        data-en="Total Websites">
+                        कुल वेबसाइट
+                    </span>
+
+                    <strong id="analyticsTotalWebsites">
+                        0
+                    </strong>
+
+                    <small id="analyticsWebsiteChange">
+                        —
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECTS -->
+
+            <article class="analytics-stat-card">
+
+                <div class="analytics-stat-icon purple">
+
+                    <i class="fa-solid fa-folder-tree"></i>
+
+                </div>
+
+                <div>
+
+                    <span
+                        data-ne="कुल प्रोजेक्ट"
+                        data-en="Total Projects">
+                        कुल प्रोजेक्ट
+                    </span>
+
+                    <strong id="analyticsTotalProjects">
+                        0
+                    </strong>
+
+                    <small id="analyticsProjectChange">
+                        —
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <!-- CLIENTS -->
+
+            <article class="analytics-stat-card">
+
+                <div class="analytics-stat-icon orange">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <div>
+
+                    <span
+                        data-ne="कुल क्लाइन्ट"
+                        data-en="Total Clients">
+                        कुल क्लाइन्ट
+                    </span>
+
+                    <strong id="analyticsTotalClients">
+                        0
+                    </strong>
+
+                    <small id="analyticsClientChange">
+                        —
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <!-- COMPLETION -->
+
+            <article class="analytics-stat-card">
+
+                <div class="analytics-stat-icon green">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span
+                        data-ne="सफलता दर"
+                        data-en="Success Rate">
+                        सफलता दर
+                    </span>
+
+                    <strong id="analyticsSuccessRate">
+                        0%
+                    </strong>
+
+                    <small
+                        data-ne="समग्र Completion"
+                        data-en="Overall completion">
+                        समग्र Completion
+                    </small>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- =================================================
+             CHART GRID
+        ================================================== -->
+
+        <section class="analytics-grid">
+
+
+            <!-- MONTHLY PERFORMANCE -->
+
+            <article class="analytics-card large-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3
+                            data-ne="मासिक प्रदर्शन"
+                            data-en="Monthly Performance">
+                            मासिक प्रदर्शन
+                        </h3>
+
+                        <p
+                            data-ne="पछिल्ला महिनाहरूको प्रगति"
+                            data-en="Performance over recent months">
+                            पछिल्ला महिनाहरूको प्रगति
+                        </p>
+
+                    </div>
+
+
+                    <select
+                        id="performancePeriod"
+                        class="chart-select">
+
+                        <option
+                            value="6"
+                            data-ne="६ महिना"
+                            data-en="6 Months">
+                            ६ महिना
+                        </option>
+
+                        <option
+                            value="12"
+                            data-ne="१२ महिना"
+                            data-en="12 Months">
+                            १२ महिना
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="chart-container">
+
+                    <canvas id="performanceChart"></canvas>
+
+                </div>
+
+            </article>
+
+
+            <!-- WEBSITE STATUS -->
+
+            <article class="analytics-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3
+                            data-ne="वेबसाइट स्थिति"
+                            data-en="Website Status">
+                            वेबसाइट स्थिति
+                        </h3>
+
+                        <p
+                            data-ne="हालको अवस्था"
+                            data-en="Current status">
+                            हालको अवस्था
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="donut-wrapper">
+
+                    <canvas id="websiteStatusChart"></canvas>
+
+                    <div class="donut-center">
+
+                        <strong id="websiteStatusTotal">
+                            0
+                        </strong>
+
+                        <span
+                            data-ne="वेबसाइट"
+                            data-en="Websites">
+                            वेबसाइट
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="chart-legend"
+                     id="websiteStatusLegend">
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT STATUS -->
+
+            <article class="analytics-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3
+                            data-ne="प्रोजेक्ट स्थिति"
+                            data-en="Project Status">
+                            प्रोजेक्ट स्थिति
+                        </h3>
+
+                        <p
+                            data-ne="प्रोजेक्टहरूको अवस्था"
+                            data-en="Project breakdown">
+                            प्रोजेक्टहरूको अवस्था
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="donut-wrapper">
+
+                    <canvas id="projectStatusChart"></canvas>
+
+                    <div class="donut-center">
+
+                        <strong id="projectStatusTotal">
+                            0
+                        </strong>
+
+                        <span
+                            data-ne="प्रोजेक्ट"
+                            data-en="Projects">
+                            प्रोजेक्ट
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="chart-legend"
+                     id="projectStatusLegend">
+
+                </div>
+
+            </article>
+
+
+            <!-- CLIENT GROWTH -->
+
+            <article class="analytics-card large-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3
+                            data-ne="क्लाइन्ट वृद्धि"
+                            data-en="Client Growth">
+                            क्लाइन्ट वृद्धि
+                        </h3>
+
+                        <p
+                            data-ne="क्लाइन्ट सम्बन्धी वृद्धि"
+                            data-en="Client growth overview">
+                            क्लाइन्ट सम्बन्धी वृद्धि
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="chart-container">
+
+                    <canvas id="clientGrowthChart"></canvas>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- =================================================
+             LOWER GRID
+        ================================================== -->
+
+        <section class="analytics-lower-grid">
+
+
+            <!-- TOP SERVICES -->
+
+            <article class="analytics-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3
+                            data-ne="लोकप्रिय सेवाहरू"
+                            data-en="Top Services">
+                            लोकप्रिय सेवाहरू
+                        </h3>
+
+                        <p
+                            data-ne="सबैभन्दा धेरै प्रयोग भएका सेवाहरू"
+                            data-en="Most used services">
+                            सबैभन्दा धेरै प्रयोग भएका सेवाहरू
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="service-ranking"
+                     id="serviceRanking">
+
+                    <!-- JS -->
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT PROGRESS -->
+
+            <article class="analytics-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3
+                            data-ne="प्रोजेक्ट प्रगति"
+                            data-en="Project Progress">
+                            प्रोजेक्ट प्रगति
+                        </h3>
+
+                        <p
+                            data-ne="हालका प्रोजेक्टहरू"
+                            data-en="Recent projects">
+                            हालका प्रोजेक्टहरू
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-progress-list"
+                     id="projectProgressList">
+
+                    <!-- JS -->
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- =================================================
+             QUICK INSIGHTS
+        ================================================== -->
+
+        <section class="insights-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span
+                        data-ne="SMART INSIGHTS"
+                        data-en="SMART INSIGHTS">
+                        SMART INSIGHTS
+                    </span>
+
+                    <h2
+                        data-ne="व्यवसायिक जानकारी"
+                        data-en="Business Insights">
+                        व्यवसायिक जानकारी
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="insights-grid">
+
+
+                <article class="insight-card">
+
+                    <div class="insight-icon">
+
+                        <i class="fa-solid fa-rocket"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3
+                            data-ne="प्रगति"
+                            data-en="Progress">
+                            प्रगति
+                        </h3>
+
+                        <p id="progressInsight">
+                            Analytics data loading...
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="insight-card">
+
+                    <div class="insight-icon">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3
+                            data-ne="क्लाइन्ट"
+                            data-en="Clients">
+                            क्लाइन्ट
+                        </h3>
+
+                        <p id="clientInsight">
+                            Analytics data loading...
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="insight-card">
+
+                    <div class="insight-icon">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3
+                            data-ne="कार्यसम्पादन"
+                            data-en="Performance">
+                            कार्यसम्पादन
+                        </h3>
+
+                        <p id="performanceInsight">
+                            Analytics data loading...
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             NOTIFICATION PANEL
+        ================================================== -->
+
+        <div class="notification-panel"
+             id="notificationPanel"
+             aria-hidden="true">
+
+            <div class="notification-panel-header">
+
+                <div>
+
+                    <h3
+                        data-ne="सूचनाहरू"
+                        data-en="Notifications">
+                        सूचनाहरू
+                    </h3>
+
+                    <span id="notificationCountText">
+                        0
+                    </span>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="clearNotificationsBtn">
+
+                    <i class="fa-solid fa-check-double"></i>
+
+                    <span
+                        data-ne="सबै पढिएको"
+                        data-en="Mark all read">
+                        सबै पढिएको
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <div class="notification-list"
+                 id="notificationList">
+
+            </div>
+
+
+            <div class="notification-empty"
+                 id="notificationEmpty">
+
+                <i class="fa-regular fa-bell-slash"></i>
+
+                <p
+                    data-ne="अहिले कुनै सूचना छैन।"
+                    data-en="No notifications right now.">
+                    अहिले कुनै सूचना छैन।
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             TOAST
+        ================================================== -->
+
+        <div class="analytics-toast"
+             id="analyticsToast"
+             role="status"
+             aria-live="polite">
+
+            <i class="fa-solid fa-circle-check"
+               id="toastIcon">
+            </i>
+
+            <span id="toastMessage">
+                Success
+            </span>
+
+        </div>
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+            <span>© 2026</span>
+
+            <strong>BARIWAY DIGITAL HUB</strong>
+
+            <span>—</span>
+
+            <span
+                data-ne="From Nepal To The World"
+                data-en="From Nepal To The World">
+                From Nepal To The World
+            </span>
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+<!-- =====================================================
+     ANALYTICS JAVASCRIPT
+====================================================== -->
+
+<script src="js/analytics.js"></script>
+
+</body>
+</html>

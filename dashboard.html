@@ -1,0 +1,2189 @@
+<!DOCTYPE html>
+<html lang="ne">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="BARIWAY DIGITAL HUB Professional Dashboard">
+
+    <meta
+        name="theme-color"
+        content="#0f172a">
+
+    <title>BARIWAY DIGITAL HUB | Dashboard</title>
+
+
+    <!-- =====================================================
+         DASHBOARD CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/dashboard.css">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         CHART.JS
+    ====================================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/chart.js">
+    </script>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     MOBILE MENU BUTTON
+========================================================= -->
+
+<button
+    class="menu-btn"
+    id="menuBtn"
+    type="button"
+    aria-label="Open Menu"
+    aria-controls="sidebar"
+    aria-expanded="false">
+
+    <i class="fas fa-bars"></i>
+
+</button>
+
+
+
+<!-- =========================================================
+     SIDEBAR OVERLAY
+========================================================= -->
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay"
+    aria-hidden="true">
+</div>
+
+
+
+<!-- =========================================================
+     MAIN CONTAINER
+========================================================= -->
+
+<div class="container">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar">
+
+
+       <!-- =================================================
+     SIDEBAR BRAND / LOGO
+================================================== -->
+
+<div class="sidebar-brand">
+
+    <a
+        href="index.html"
+        class="sidebar-logo"
+        aria-label="BARIWAY DIGITAL HUB Home">
+
+        <img
+            src="Image/bari.png"
+            alt="BARIWAY DIGITAL HUB Logo"
+            loading="eager">
+
+    </a>
+
+    <div class="sidebar-brand-text">
+
+        <h2>BARIWAY</h2>
+
+        <p>DIGITAL HUB</p>
+
+        <span>FROM NEPAL TO THE WORLD</span>
+
+    </div>
+
+</div>
+
+
+
+        <!-- =================================================
+             SIDEBAR NAVIGATION
+        ================================================== -->
+
+        <nav
+            class="sidebar-menu"
+            aria-label="Main Navigation">
+
+
+            <!-- WEBSITE -->
+
+            <a
+                href="website.html"
+                class="active"
+                data-ne="वेबसाइट विकास"
+                data-en="Website Development">
+
+                <i class="fas fa-globe"></i>
+
+                <span>
+                    Website Development
+                </span>
+
+                <i class="fas fa-chevron-right arrow"></i>
+
+            </a>
+
+
+
+            <!-- SOFTWARE -->
+
+            <a
+                href="#"
+                data-ne="सफ्टवेयर विकास"
+                data-en="Software Development">
+
+                <i class="fas fa-laptop-code"></i>
+
+                <span>
+                    Software Development
+                </span>
+
+                <i class="fas fa-chevron-right arrow"></i>
+
+            </a>
+
+
+
+            <!-- AI -->
+
+            <a
+                href="#"
+                data-ne="एआई समाधान"
+                data-en="AI Solutions">
+
+                <i class="fas fa-robot"></i>
+
+                <span>
+                    AI Solutions
+                </span>
+
+                <i class="fas fa-chevron-right arrow"></i>
+
+            </a>
+
+
+
+            <!-- GRAPHIC -->
+
+            <a
+                href="#"
+                data-ne="ग्राफिक डिजाइन"
+                data-en="Graphic Design">
+
+                <i class="fas fa-palette"></i>
+
+                <span>
+                    Graphic Design
+                </span>
+
+                <i class="fas fa-chevron-right arrow"></i>
+
+            </a>
+
+
+
+            <!-- VIDEO -->
+
+            <a
+                href="#"
+                data-ne="भिडियो सम्पादन"
+                data-en="Video Editing">
+
+                <i class="fas fa-video"></i>
+
+                <span>
+                    Video Editing
+                </span>
+
+                <i class="fas fa-chevron-right arrow"></i>
+
+            </a>
+
+
+
+            <!-- TRAINING -->
+
+            <a
+                href="#"
+                data-ne="तालिम"
+                data-en="Training">
+
+                <i class="fas fa-graduation-cap"></i>
+
+                <span>
+                    Training
+                </span>
+
+                <i class="fas fa-chevron-right arrow"></i>
+
+            </a>
+
+
+
+            <!-- PROJECTS -->
+
+            <a
+                href="projects.html"
+                data-ne="प्रोजेक्टहरू"
+                data-en="Projects">
+
+                <i class="fas fa-folder-open"></i>
+
+                <span>
+                    Projects
+                </span>
+
+                <i class="fas fa-chevron-right arrow"></i>
+
+            </a>
+
+
+
+            <!-- SETTINGS -->
+
+            <a
+                href="settings.html"
+                data-ne="सेटिङहरू"
+                data-en="Settings">
+
+                <i class="fas fa-gear"></i>
+
+                <span>
+                    Settings
+                </span>
+
+                <i class="fas fa-chevron-right arrow"></i>
+
+            </a>
+
+
+        </nav>
+
+
+
+        <!-- =================================================
+             SIDEBAR USER
+        ================================================== -->
+
+        <div class="sidebar-user">
+
+
+            <div class="sidebar-profile">
+
+                <img
+                    <img
+                        src="Image/saksham.jpg"
+                        id="sidebarProfilePhoto"
+                        alt="Profile Photo"
+                        loading="lazy">
+
+                <span class="online-dot"></span>
+
+            </div>
+
+
+
+            <h3 id="sidebarUserName">
+                Loading...
+            </h3>
+
+
+
+            <p>
+
+                <span class="status-dot"></span>
+
+                <span
+                    data-ne="अनलाइन"
+                    data-en="Online">
+
+                    Online
+
+                </span>
+
+            </p>
+
+
+
+            <div class="member-badge">
+
+                <i class="fas fa-star"></i>
+
+                <span
+                    data-ne="Premium सदस्य"
+                    data-en="Premium Member">
+
+                    Premium Member
+
+                </span>
+
+            </div>
+
+
+
+            <button
+                class="profile-btn"
+                id="profileBtn"
+                type="button">
+
+                <i class="fas fa-user"></i>
+
+                <span
+                    data-ne="मेरो प्रोफाइल"
+                    data-en="My Profile">
+
+                    My Profile
+
+                </span>
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             LOGOUT
+        ================================================== -->
+
+        <button
+            class="logout-btn"
+            id="logoutBtn"
+            type="button">
+
+            <i class="fas fa-right-from-bracket"></i>
+
+            <span
+                data-ne="लगआउट"
+                data-en="Logout">
+
+                Logout
+
+            </span>
+
+        </button>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <i class="fas fa-search"></i>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="खोज्नुहोस्..."
+                    autocomplete="off"
+                    aria-label="Search Dashboard">
+
+            </div>
+
+
+
+            <!-- TOPBAR RIGHT -->
+
+            <div class="topbar-right">
+
+
+                <!-- =========================================
+                     DATE / TIME
+                ========================================== -->
+
+                <div
+                    class="datetime"
+                    id="datetime">
+
+                    <div
+                        class="datetime-date"
+                        id="currentDate">
+
+                        मिति लोड हुँदैछ...
+
+                    </div>
+
+                    <div
+                        class="datetime-time"
+                        id="currentTime">
+
+                        समय लोड हुँदैछ...
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     LANGUAGE
+                ========================================== -->
+
+                <div class="language-switcher">
+
+
+                    <button
+                        id="languageBtn"
+                        class="language-btn"
+                        type="button"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        aria-controls="languageMenu">
+
+                        <i class="fas fa-globe"></i>
+
+                        <span id="languageText">
+                            नेपाली
+                        </span>
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </button>
+
+
+
+                    <div
+                        id="languageMenu"
+                        class="language-menu"
+                        role="menu">
+
+
+                        <button
+                            type="button"
+                            role="menuitem"
+                            onclick="changeLanguage('ne')">
+
+                            🇳🇵 नेपाली
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            role="menuitem"
+                            onclick="changeLanguage('en')">
+
+                            🇬🇧 English
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =========================================
+                     NOTIFICATIONS
+                ========================================== -->
+
+                <div class="notification-wrapper">
+
+
+                    <button
+                        class="notification-btn"
+                        id="notificationBtn"
+                        type="button"
+                        aria-label="Notifications"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        aria-controls="notificationPanel">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span
+                            class="notification-badge"
+                            id="notificationBadge">
+
+                            0
+
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- NOTIFICATION PANEL -->
+
+                    <div
+                        class="notification-panel"
+                        id="notificationPanel">
+
+
+                        <!-- HEADER -->
+
+                        <div class="notification-header">
+
+
+                            <div>
+
+                                <h3
+                                    data-ne="सूचनाहरू"
+                                    data-en="Notifications">
+
+                                    सूचनाहरू
+
+                                </h3>
+
+
+                                <span
+                                    class="notification-subtitle"
+                                    id="notificationSubtitle">
+
+                                    0 नयाँ सूचनाहरू
+
+                                </span>
+
+                            </div>
+
+
+
+                            <button
+                                class="mark-read-btn"
+                                id="markAllRead"
+                                type="button">
+
+                                <i class="fa-solid fa-check-double"></i>
+
+                                <span
+                                    data-ne="सबै पढेको बनाउनुहोस्"
+                                    data-en="Mark all as read">
+
+                                    सबै पढेको बनाउनुहोस्
+
+                                </span>
+
+                            </button>
+
+
+                        </div>
+
+
+
+                        <!-- LIST -->
+
+                        <div
+                            class="notification-list"
+                            id="notificationList">
+
+                        </div>
+
+
+
+                        <!-- FOOTER -->
+
+                        <div class="notification-footer">
+
+
+                            <button
+                                type="button"
+                                id="viewAllNotifications">
+
+                                <span
+                                    data-ne="सबै सूचनाहरू हेर्नुहोस्"
+                                    data-en="View all notifications">
+
+                                    सबै सूचनाहरू हेर्नुहोस्
+
+                                </span>
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =========================================
+                     THEME
+                ========================================== -->
+
+                <button
+                    id="darkModeBtn"
+                    class="top-icon dark-btn"
+                    type="button"
+                    title="Dark Mode"
+                    aria-label="Switch theme">
+
+                    <i class="fas fa-moon"></i>
+
+                </button>
+
+
+
+                <!-- =========================================
+                     ADMIN
+                ========================================== -->
+
+                <div class="admin">
+
+
+                    <div class="admin-avatar">
+
+                        <i class="fas fa-user"></i>
+
+                    </div>
+
+
+
+                    <div>
+
+                        <strong id="adminName">
+                            Admin
+                        </strong>
+
+                        <small
+                            data-ne="प्रशासक"
+                            data-en="Administrator">
+
+                            Administrator
+
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================================
+             WELCOME
+        ================================================== -->
+
+        <section class="welcome-box">
+
+
+            <div>
+
+
+                <span class="welcome-label">
+                    BARIWAY DIGITAL HUB
+                </span>
+
+
+
+                <h1>
+
+                    👋
+                    <span
+                        data-ne="स्वागत तथा हार्दिक नमस्कार,"
+                        data-en="Welcome,">
+
+                        स्वागत तथा हार्दिक नमस्कार,
+
+                    </span>
+
+                    <span id="username">
+                        User
+                    </span>
+
+                </h1>
+
+
+
+                <p id="welcomeText">
+
+                    तपाईंको Professional Dashboard मा स्वागत छ।
+                    आजको काम र Project हरू यहाँबाट व्यवस्थापन गर्नुहोस्।
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="welcome-icon">
+
+                <i class="fas fa-chart-line"></i>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROFILE CARD
+        ================================================== -->
+
+        <section class="profile-card">
+
+
+            <div class="profile-photo-wrap">
+
+
+                <img
+                    src="bari.png"
+                    alt="Profile"
+                    class="profile-photo"
+                    id="profilePhoto"
+                    loading="lazy">
+
+
+                <span class="photo-online-dot"></span>
+
+
+            </div>
+
+
+
+            <div class="profile-info">
+
+
+                <span class="profile-label">
+
+                    <i class="fas fa-user-circle"></i>
+
+                    <span
+                        data-ne="मेरो प्रोफाइल"
+                        data-en="MY PROFILE">
+
+                        MY PROFILE
+
+                    </span>
+
+                </span>
+
+
+
+                <h2 id="profileName">
+                    Loading...
+                </h2>
+
+
+
+                <p id="profileEmail">
+                    Loading...
+                </p>
+
+
+
+                <div class="profile-status">
+
+                    <span class="status-dot"></span>
+
+                    <strong
+                        data-ne="अनलाइन"
+                        data-en="Online">
+
+                        Online
+
+                    </strong>
+
+                    <small
+                        data-ne="उपलब्ध"
+                        data-en="Available">
+
+                        Available
+
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="profile-actions">
+
+
+                <input
+                    type="file"
+                    id="photoInput"
+                    accept="image/jpeg,image/png,image/webp,image/gif"
+                    hidden>
+
+
+
+                <button
+                    class="change-photo"
+                    id="changePhotoBtn"
+                    type="button">
+
+                    <i class="fas fa-camera"></i>
+
+                    <span
+                        data-ne="फोटो परिवर्तन गर्नुहोस्"
+                        data-en="Change Photo">
+
+                        Change Photo
+
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             STATISTICS
+        ================================================== -->
+
+        <section
+            class="stats"
+            aria-label="Dashboard Statistics">
+
+
+            <!-- PROJECTS -->
+
+            <div class="stat-card projects-card">
+
+
+                <div class="stat-icon">
+
+                    <i class="fas fa-folder-open"></i>
+
+                </div>
+
+
+
+                <div>
+
+                    <h2 id="projectCount">
+                        24
+                    </h2>
+
+                    <p
+                        data-ne="प्रोजेक्टहरू"
+                        data-en="Projects">
+
+                        Projects
+
+                    </p>
+
+                    <small
+                        data-ne="+12% यो महिना"
+                        data-en="+12% this month">
+
+                        +12% this month
+
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- CLIENTS -->
+
+            <div class="stat-card clients-card">
+
+
+                <div class="stat-icon">
+
+                    <i class="fas fa-users"></i>
+
+                </div>
+
+
+
+                <div>
+
+                    <h2 id="clientCount">
+                        58
+                    </h2>
+
+                    <p
+                        data-ne="ग्राहकहरू"
+                        data-en="Clients">
+
+                        Clients
+
+                    </p>
+
+                    <small
+                        data-ne="+8% यो महिना"
+                        data-en="+8% this month">
+
+                        +8% this month
+
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- SERVICES -->
+
+            <div class="stat-card services-card">
+
+
+                <div class="stat-icon">
+
+                    <i class="fas fa-layer-group"></i>
+
+                </div>
+
+
+
+                <div>
+
+                    <h2 id="serviceCount">
+                        36
+                    </h2>
+
+                    <p
+                        data-ne="सेवाहरू"
+                        data-en="Services">
+
+                        Services
+
+                    </p>
+
+                    <small
+                        data-ne="३ नयाँ सेवाहरू"
+                        data-en="3 new services">
+
+                        3 new services
+
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- SUCCESS -->
+
+            <div class="stat-card success-card">
+
+
+                <div class="stat-icon">
+
+                    <i class="fas fa-trophy"></i>
+
+                </div>
+
+
+
+                <div>
+
+                    <h2 id="successCount">
+                        98%
+                    </h2>
+
+                    <p
+                        data-ne="सफलता दर"
+                        data-en="Success Rate">
+
+                        Success Rate
+
+                    </p>
+
+                    <small
+                        data-ne="उत्कृष्ट प्रदर्शन"
+                        data-en="Excellent performance">
+
+                        Excellent performance
+
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             QUICK ACCESS
+        ================================================== -->
+
+        <section class="section">
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <span class="section-label">
+                        SHORTCUTS
+                    </span>
+
+                    <h2 id="quickAccessTitle">
+
+                        ⚡
+
+                        <span
+                            data-ne="द्रुत पहुँच"
+                            data-en="Quick Access">
+
+                            Quick Access
+
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+
+                <a
+                    class="view-all"
+                    href="projects.html">
+
+                    <span
+                        data-ne="सबै हेर्नुहोस्"
+                        data-en="View All">
+
+                        View All
+
+                    </span>
+
+                    →
+
+                </a>
+
+
+            </div>
+
+
+
+            <div class="quick-grid">
+
+
+                <!-- PROJECTS -->
+
+                <a
+                    href="projects.html"
+                    class="quick-card">
+
+                    <div class="quick-icon">
+
+                        <i class="fas fa-folder-open"></i>
+
+                    </div>
+
+                    <h3
+                        data-ne="प्रोजेक्टहरू"
+                        data-en="Projects">
+
+                        Projects
+
+                    </h3>
+
+                    <p
+                        data-ne="प्रोजेक्ट व्यवस्थापन"
+                        data-en="Manage Projects">
+
+                        Manage Projects
+
+                    </p>
+
+                </a>
+
+
+
+                <!-- CLIENTS -->
+
+                <a
+                    href="clients.html"
+                    class="quick-card">
+
+                    <div class="quick-icon">
+
+                        <i class="fas fa-users"></i>
+
+                    </div>
+
+                    <h3
+                        data-ne="ग्राहकहरू"
+                        data-en="Clients">
+
+                        Clients
+
+                    </h3>
+
+                    <p
+                        data-ne="ग्राहक व्यवस्थापन"
+                        data-en="Client Management">
+
+                        Client Management
+
+                    </p>
+
+                </a>
+
+
+
+                <!-- SERVICES -->
+
+                <a
+                    href="services.html"
+                    class="quick-card">
+
+                    <div class="quick-icon">
+
+                        <i class="fas fa-globe"></i>
+
+                    </div>
+
+                    <h3
+                        data-ne="सेवाहरू"
+                        data-en="Services">
+
+                        Services
+
+                    </h3>
+
+                    <p
+                        data-ne="हाम्रा सेवाहरू"
+                        data-en="Our Services">
+
+                        Our Services
+
+                    </p>
+
+                </a>
+
+
+
+                <!-- ANALYTICS -->
+
+                <a
+                    href="analytics.html"
+                    class="quick-card">
+
+                    <div class="quick-icon">
+
+                        <i class="fas fa-chart-pie"></i>
+
+                    </div>
+
+                    <h3
+                        data-ne="विश्लेषण"
+                        data-en="Analytics">
+
+                        Analytics
+
+                    </h3>
+
+                    <p
+                        data-ne="रिपोर्ट हेर्नुहोस्"
+                        data-en="View Reports">
+
+                        View Reports
+
+                    </p>
+
+                </a>
+
+
+
+                <!-- PROFILE -->
+
+                <a
+                    href="profile.html"
+                    class="quick-card">
+
+                    <div class="quick-icon">
+
+                        <i class="fas fa-user"></i>
+
+                    </div>
+
+                    <h3
+                        data-ne="प्रोफाइल"
+                        data-en="Profile">
+
+                        Profile
+
+                    </h3>
+
+                    <p
+                        data-ne="प्रोफाइल सम्पादन"
+                        data-en="Edit Profile">
+
+                        Edit Profile
+
+                    </p>
+
+                </a>
+
+
+
+                <!-- SETTINGS -->
+
+                <a
+                    href="settings.html"
+                    class="quick-card">
+
+                    <div class="quick-icon">
+
+                        <i class="fas fa-gear"></i>
+
+                    </div>
+
+                    <h3
+                        data-ne="सेटिङहरू"
+                        data-en="Settings">
+
+                        Settings
+
+                    </h3>
+
+                    <p
+                        data-ne="सिस्टम सेटिङहरू"
+                        data-en="System Settings">
+
+                        System Settings
+
+                    </p>
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             MAIN DASHBOARD GRID
+        ================================================== -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- =============================================
+                 MONTHLY PROJECT CHART
+            ============================================== -->
+
+            <div class="chart-card">
+
+
+                <div class="card-header">
+
+
+                    <div>
+
+                        <span class="section-label">
+                            ANALYTICS
+                        </span>
+
+                        <h2>
+
+                            📊
+
+                            <span
+                                data-ne="मासिक प्रोजेक्टहरू"
+                                data-en="Monthly Projects">
+
+                                Monthly Projects
+
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+
+
+                    <button
+                        class="chart-filter"
+                        type="button"
+                        aria-label="Chart Filter">
+
+                        This Year
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </button>
+
+
+                </div>
+
+
+
+                <div class="chart-container">
+
+                    <canvas
+                        id="projectChart"
+                        aria-label="Monthly Projects Chart">
+                    </canvas>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =============================================
+                 RECENT PROJECTS
+            ============================================== -->
+
+            <div class="dashboard-card">
+
+
+                <div class="card-header">
+
+
+                    <h2>
+
+                        📋
+
+                        <span
+                            data-ne="हालका प्रोजेक्टहरू"
+                            data-en="Recent Projects">
+
+                            Recent Projects
+
+                        </span>
+
+                    </h2>
+
+
+
+                    <a href="projects.html">
+
+                        <span
+                            data-ne="सबै"
+                            data-en="View All">
+
+                            View All
+
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+
+                <div class="project-list">
+
+
+                    <!-- PROJECT 1 -->
+
+                    <div class="project-item">
+
+
+                        <div class="project-icon">
+                            🌐
+                        </div>
+
+
+
+                        <div>
+
+                            <h4>
+                                Company Website
+                            </h4>
+
+                            <small
+                                data-ne="वेबसाइट विकास"
+                                data-en="Website Development">
+
+                                Website Development
+
+                            </small>
+
+                        </div>
+
+
+
+                        <span
+                            class="project-status completed"
+                            data-ne="सम्पन्न"
+                            data-en="Completed">
+
+                            Completed
+
+                        </span>
+
+
+                    </div>
+
+
+
+                    <!-- PROJECT 2 -->
+
+                    <div class="project-item">
+
+
+                        <div class="project-icon">
+                            🤖
+                        </div>
+
+
+
+                        <div>
+
+                            <h4>
+                                AI Chatbot
+                            </h4>
+
+                            <small
+                                data-ne="एआई समाधान"
+                                data-en="AI Solutions">
+
+                                AI Solutions
+
+                            </small>
+
+                        </div>
+
+
+
+                        <span
+                            class="project-status progress-status"
+                            data-ne="काम हुँदैछ"
+                            data-en="In Progress">
+
+                            In Progress
+
+                        </span>
+
+
+                    </div>
+
+
+
+                    <!-- PROJECT 3 -->
+
+                    <div class="project-item">
+
+
+                        <div class="project-icon">
+                            🎨
+                        </div>
+
+
+
+                        <div>
+
+                            <h4>
+                                Logo Design
+                            </h4>
+
+                            <small
+                                data-ne="ग्राफिक डिजाइन"
+                                data-en="Graphic Design">
+
+                                Graphic Design
+
+                            </small>
+
+                        </div>
+
+
+
+                        <span
+                            class="project-status completed"
+                            data-ne="सम्पन्न"
+                            data-en="Completed">
+
+                            Completed
+
+                        </span>
+
+
+                    </div>
+
+
+
+                    <!-- PROJECT 4 -->
+
+                    <div class="project-item">
+
+
+                        <div class="project-icon">
+                            📱
+                        </div>
+
+
+
+                        <div>
+
+                            <h4>
+                                Mobile UI
+                            </h4>
+
+                            <small
+                                data-ne="UI/UX डिजाइन"
+                                data-en="UI/UX Design">
+
+                                UI/UX Design
+
+                            </small>
+
+                        </div>
+
+
+
+                        <span
+                            class="project-status pending"
+                            data-ne="पेन्डिङ"
+                            data-en="Pending">
+
+                            Pending
+
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             SERVICE PROGRESS
+        ================================================== -->
+
+        <section class="progress-section">
+
+
+            <div class="card-header">
+
+
+                <div>
+
+                    <span class="section-label">
+                        PERFORMANCE
+                    </span>
+
+                    <h2>
+
+                        📈
+
+                        <span
+                            data-ne="सेवा प्रगति"
+                            data-en="Service Progress">
+
+                            Service Progress
+
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- WEBSITE -->
+
+            <div class="progress-item">
+
+
+                <div class="progress-title">
+
+                    <span>
+                        🌐 Website Development
+                    </span>
+
+                    <strong>
+                        95%
+                    </strong>
+
+                </div>
+
+
+
+                <div class="progress">
+
+                    <div
+                        class="progress-fill"
+                        style="width:95%;">
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- SOFTWARE -->
+
+            <div class="progress-item">
+
+
+                <div class="progress-title">
+
+                    <span>
+                        💻 Software Development
+                    </span>
+
+                    <strong>
+                        90%
+                    </strong>
+
+                </div>
+
+
+
+                <div class="progress">
+
+                    <div
+                        class="progress-fill"
+                        style="width:90%;">
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- AI -->
+
+            <div class="progress-item">
+
+
+                <div class="progress-title">
+
+                    <span>
+                        🤖 AI Solutions
+                    </span>
+
+                    <strong>
+                        85%
+                    </strong>
+
+                </div>
+
+
+
+                <div class="progress">
+
+                    <div
+                        class="progress-fill"
+                        style="width:85%;">
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- GRAPHIC -->
+
+            <div class="progress-item">
+
+
+                <div class="progress-title">
+
+                    <span>
+                        🎨 Graphic Design
+                    </span>
+
+                    <strong>
+                        88%
+                    </strong>
+
+                </div>
+
+
+
+                <div class="progress">
+
+                    <div
+                        class="progress-fill"
+                        style="width:88%;">
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             QUICK ACTIONS
+        ================================================== -->
+
+        <section class="quick-actions">
+
+
+            <!-- NEW PROJECT -->
+
+            <button
+                class="action-btn"
+                type="button"
+                onclick="window.location.href='projects.html'">
+
+                <i class="fas fa-plus"></i>
+
+                <span
+                    data-ne="नयाँ प्रोजेक्ट"
+                    data-en="New Project">
+
+                    New Project
+
+                </span>
+
+            </button>
+
+
+
+            <!-- ADD CLIENT -->
+
+            <button
+                class="action-btn"
+                type="button"
+                onclick="window.location.href='clients.html'">
+
+                <i class="fas fa-user-plus"></i>
+
+                <span
+                    data-ne="ग्राहक थप्नुहोस्"
+                    data-en="Add Client">
+
+                    Add Client
+
+                </span>
+
+            </button>
+
+
+
+            <!-- REPORTS -->
+
+            <button
+                class="action-btn"
+                type="button"
+                onclick="window.location.href='analytics.html'">
+
+                <i class="fas fa-chart-column"></i>
+
+                <span
+                    data-ne="रिपोर्टहरू"
+                    data-en="Reports">
+
+                    Reports
+
+                </span>
+
+            </button>
+
+
+
+            <!-- SETTINGS -->
+
+            <button
+                class="action-btn"
+                type="button"
+                onclick="window.location.href='settings.html'">
+
+                <i class="fas fa-gear"></i>
+
+                <span
+                    data-ne="सेटिङहरू"
+                    data-en="Settings">
+
+                    Settings
+
+                </span>
+
+            </button>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer class="footer">
+
+
+            <div>
+
+                <strong>
+                    BARIWAY DIGITAL HUB
+                </strong>
+
+                <span>
+                    — From Nepal To The World
+                </span>
+
+            </div>
+
+
+
+            <div>
+
+                ©
+
+                <span id="currentYear">
+                    2026
+                </span>
+
+                · Version 5.2 Professional
+
+            </div>
+
+
+        </footer>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     NOTIFICATION SYSTEM
+     Load BEFORE dashboard.js
+========================================================= -->
+
+<script
+    src="js/notifications.js"></script>
+
+
+
+<!-- =========================================================
+     DASHBOARD JAVASCRIPT
+========================================================= -->
+
+<script
+    src="js/dashboard.js">
+</script>
+
+
+
+<!-- =========================================================
+     SMALL HTML-SIDE SAFETY HELPERS
+========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* -------------------------------------------------------
+       Profile Photo Button
+    ------------------------------------------------------- */
+
+    const changePhotoBtn =
+        document.getElementById("changePhotoBtn");
+
+    const photoInput =
+        document.getElementById("photoInput");
+
+
+    if (changePhotoBtn && photoInput) {
+
+        changePhotoBtn.addEventListener(
+            "click",
+            function () {
+
+                photoInput.click();
+
+            }
+        );
+
+    }
+
+
+    /* -------------------------------------------------------
+       Sidebar Overlay
+    ------------------------------------------------------- */
+
+    const menuBtn =
+        document.getElementById("menuBtn");
+
+    const sidebar =
+        document.getElementById("sidebar");
+
+    const overlay =
+        document.getElementById("sidebarOverlay");
+
+
+    function closeSidebar() {
+
+        if (sidebar) {
+
+            sidebar.classList.remove("active");
+
+        }
+
+        if (overlay) {
+
+            overlay.classList.remove("active");
+
+        }
+
+        if (menuBtn) {
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        }
+
+    }
+
+
+    if (menuBtn && sidebar) {
+
+        menuBtn.addEventListener(
+            "click",
+            function () {
+
+                const isActive =
+                    sidebar.classList.toggle(
+                        "active"
+                    );
+
+
+                if (overlay) {
+
+                    overlay.classList.toggle(
+                        "active",
+                        isActive
+                    );
+
+                }
+
+
+                menuBtn.setAttribute(
+                    "aria-expanded",
+                    isActive
+                        ? "true"
+                        : "false"
+                );
+
+            }
+        );
+
+    }
+
+
+    if (overlay) {
+
+        overlay.addEventListener(
+            "click",
+            closeSidebar
+        );
+
+    }
+
+
+    /* -------------------------------------------------------
+       Close sidebar when navigation link is clicked
+    ------------------------------------------------------- */
+
+    if (sidebar) {
+
+        const links =
+            sidebar.querySelectorAll(
+                ".sidebar-menu a"
+            );
+
+
+        links.forEach(function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    if (
+                        window.innerWidth <= 700
+                    ) {
+
+                        closeSidebar();
+
+                    }
+
+                }
+            );
+
+        });
+
+    }
+
+
+    /* -------------------------------------------------------
+       Profile Button
+    ------------------------------------------------------- */
+
+    const profileBtn =
+        document.getElementById("profileBtn");
+
+
+    if (profileBtn) {
+
+        profileBtn.addEventListener(
+            "click",
+            function () {
+
+                window.location.href =
+                    "profile.html";
+
+            }
+        );
+
+    }
+
+
+    /* -------------------------------------------------------
+       Logout Button
+    ------------------------------------------------------- */
+
+    const logoutBtn =
+        document.getElementById("logoutBtn");
+
+
+    if (logoutBtn) {
+
+        logoutBtn.addEventListener(
+            "click",
+            function () {
+
+                if (
+                    typeof window.logout ===
+                    "function"
+                ) {
+
+                    window.logout();
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* -------------------------------------------------------
+       Escape closes sidebar
+    ------------------------------------------------------- */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape"
+            ) {
+
+                closeSidebar();
+
+            }
+
+        }
+    );
+
+    });
+    
+});
+</script>
+
+
+</body>
+
+</html>

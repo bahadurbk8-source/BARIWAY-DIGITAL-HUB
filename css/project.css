@@ -1,0 +1,2670 @@
+/* =========================================================
+   BARIWAY DIGITAL HUB
+   PROJECT MANAGEMENT MODULE
+   project.css v4.0 FINAL
+
+   Professional • Premium • Responsive • Stable
+   Light/Dark Mode • Sidebar • Projects
+   Search • Filter • Modal • Toast
+   Compatible with project.js v3.0 FINAL
+   ========================================================= */
+
+
+/* =========================================================
+   01. ROOT VARIABLES
+========================================================= */
+
+:root {
+
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-soft: rgba(37, 99, 235, 0.10);
+
+    --success: #16a34a;
+    --success-soft: rgba(22, 163, 74, 0.10);
+
+    --warning: #d97706;
+    --warning-soft: rgba(217, 119, 6, 0.10);
+
+    --danger: #dc2626;
+    --danger-soft: rgba(220, 38, 38, 0.10);
+
+    --info: #0891b2;
+    --info-soft: rgba(8, 145, 178, 0.10);
+
+    --bg: #f5f7fb;
+    --card-bg: #ffffff;
+    --sidebar-bg: #ffffff;
+    --topbar-bg: rgba(255, 255, 255, 0.88);
+
+    --text: #111827;
+    --text-secondary: #374151;
+    --text-light: #6b7280;
+    --text-muted: #9ca3af;
+
+    --border: #e5e7eb;
+    --border-light: #eef0f4;
+
+    --shadow-sm:
+        0 2px 8px rgba(15, 23, 42, 0.05);
+
+    --shadow:
+        0 8px 24px rgba(15, 23, 42, 0.07);
+
+    --shadow-lg:
+        0 18px 50px rgba(15, 23, 42, 0.13);
+
+    --sidebar-width: 265px;
+    --topbar-height: 76px;
+
+    --radius-sm: 8px;
+    --radius: 14px;
+    --radius-lg: 20px;
+
+    --transition:
+        0.25s ease;
+
+    --font-main:
+        "Inter",
+        "Noto Sans Devanagari",
+        system-ui,
+        sans-serif;
+}
+
+
+/* =========================================================
+   02. DARK THEME
+========================================================= */
+
+[data-theme="dark"] {
+
+    --bg: #0b1120;
+    --card-bg: #111827;
+    --sidebar-bg: #0f172a;
+    --topbar-bg: rgba(15, 23, 42, 0.90);
+
+    --text: #f3f4f6;
+    --text-secondary: #d1d5db;
+    --text-light: #9ca3af;
+    --text-muted: #6b7280;
+
+    --border: #263244;
+    --border-light: #1d2939;
+
+    --primary-soft:
+        rgba(59, 130, 246, 0.13);
+
+    --success-soft:
+        rgba(34, 197, 94, 0.12);
+
+    --warning-soft:
+        rgba(245, 158, 11, 0.12);
+
+    --danger-soft:
+        rgba(239, 68, 68, 0.12);
+
+    --info-soft:
+        rgba(6, 182, 212, 0.12);
+
+    --shadow-sm:
+        0 2px 10px rgba(0, 0, 0, 0.20);
+
+    --shadow:
+        0 10px 28px rgba(0, 0, 0, 0.25);
+
+    --shadow-lg:
+        0 20px 55px rgba(0, 0, 0, 0.40);
+}
+
+
+/* =========================================================
+   03. RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    background: var(--bg);
+
+    color: var(--text);
+
+    font-family: var(--font-main);
+
+    line-height: 1.5;
+
+    -webkit-font-smoothing: antialiased;
+
+    transition:
+        background var(--transition),
+        color var(--transition);
+}
+
+
+button,
+input,
+select,
+textarea {
+
+    font: inherit;
+}
+
+
+button {
+
+    border: none;
+}
+
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+
+    outline:
+        3px solid
+        rgba(37, 99, 235, 0.20);
+
+    outline-offset: 2px;
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+}
+
+
+ul,
+ol {
+
+    list-style: none;
+}
+
+
+/* =========================================================
+   04. PAGE WRAPPER
+========================================================= */
+
+.page-wrapper {
+
+    display: flex;
+
+    min-height: 100vh;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   05. SIDEBAR
+========================================================= */
+
+.sidebar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: var(--sidebar-width);
+
+    z-index: 1000;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: var(--sidebar-bg);
+
+    border-right:
+        1px solid
+        var(--border);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition),
+        background var(--transition);
+}
+
+
+/* =========================================================
+   06. SIDEBAR HEADER
+========================================================= */
+
+.sidebar-header {
+
+    min-height: 76px;
+
+    padding:
+        0 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid
+        var(--border-light);
+}
+
+
+.brand {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    min-width: 0;
+}
+
+
+.brand-icon {
+
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            #6366f1
+        );
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 7px 18px
+        rgba(37, 99, 235, 0.22);
+}
+
+
+.brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.05;
+}
+
+
+.brand-text strong {
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.6px;
+
+    color: var(--text);
+}
+
+
+.brand-text small {
+
+    margin-top: 4px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: var(--text-light);
+}
+
+
+.sidebar-close {
+
+    display: none;
+
+    width: 34px;
+    height: 34px;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: var(--text-light);
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition),
+        color var(--transition);
+}
+
+
+.sidebar-close:hover {
+
+    background: var(--primary-soft);
+
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   07. SIDEBAR PROFILE
+========================================================= */
+
+.sidebar-profile {
+
+    margin: 18px 14px;
+
+    padding: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 13px;
+
+    background:
+        var(--primary-soft);
+}
+
+
+.profile-avatar {
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            #6366f1
+        );
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+.profile-avatar img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.profile-info {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.profile-info strong {
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: var(--text);
+}
+
+
+.profile-info span {
+
+    margin-top: 3px;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   08. SIDEBAR NAV
+========================================================= */
+
+.sidebar-nav {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding:
+        4px 12px 18px;
+}
+
+
+.sidebar-nav::-webkit-scrollbar {
+
+    width: 4px;
+}
+
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+
+    background: var(--border);
+
+    border-radius: 20px;
+}
+
+
+.nav-item {
+
+    position: relative;
+
+    min-height: 44px;
+
+    margin-bottom: 4px;
+
+    padding:
+        0 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border-radius: 10px;
+
+    color: var(--text-light);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+
+.nav-item i {
+
+    width: 18px;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+.nav-item:hover {
+
+    background: var(--primary-soft);
+
+    color: var(--primary);
+
+    transform: translateX(2px);
+}
+
+
+.nav-item.active {
+
+    background: var(--primary-soft);
+
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+
+.nav-item.active::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -12px;
+
+    top: 8px;
+    bottom: 8px;
+
+    width: 3px;
+
+    border-radius: 0 5px 5px 0;
+
+    background: var(--primary);
+}
+
+
+/* =========================================================
+   09. SIDEBAR FOOTER
+========================================================= */
+
+.sidebar-footer {
+
+    padding: 14px;
+
+    border-top:
+        1px solid
+        var(--border-light);
+}
+
+
+.logout-btn {
+
+    width: 100%;
+
+    min-height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border-radius: 10px;
+
+    background: var(--danger-soft);
+
+    color: var(--danger);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition),
+        transform var(--transition);
+}
+
+
+.logout-btn:hover {
+
+    background:
+        rgba(220, 38, 38, 0.16);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   10. MAIN CONTENT
+========================================================= */
+
+.main-content {
+
+    width: calc(
+        100% - var(--sidebar-width)
+    );
+
+    min-height: 100vh;
+
+    margin-left: var(--sidebar-width);
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   11. TOPBAR
+========================================================= */
+
+.topbar {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 500;
+
+    min-height: var(--topbar-height);
+
+    padding:
+        0 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background: var(--topbar-bg);
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+    backdrop-filter: blur(14px);
+
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+.topbar-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.menu-toggle {
+
+    display: none;
+
+    width: 40px;
+    height: 40px;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: var(--card-bg);
+
+    border:
+        1px solid
+        var(--border);
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    transition:
+        all var(--transition);
+}
+
+
+.menu-toggle:hover {
+
+    color: var(--primary);
+
+    border-color: var(--primary);
+}
+
+
+.page-title {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.page-title span {
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.3px;
+
+    color: var(--text);
+}
+
+
+.page-title small {
+
+    margin-top: 2px;
+
+    font-family:
+        "Noto Sans Devanagari",
+        var(--font-main);
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    color: var(--text-light);
+}
+
+
+.topbar-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+/* =========================================================
+   12. DATETIME
+========================================================= */
+
+.datetime {
+
+    min-height: 38px;
+
+    padding:
+        0 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 10px;
+
+    background: var(--card-bg);
+
+    color: var(--text-secondary);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.datetime i {
+
+    color: var(--primary);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   13. ICON BUTTON
+========================================================= */
+
+.icon-btn {
+
+    position: relative;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 10px;
+
+    background: var(--card-bg);
+
+    color: var(--text-secondary);
+
+    cursor: pointer;
+
+    transition:
+        color var(--transition),
+        background var(--transition),
+        border-color var(--transition),
+        transform var(--transition);
+}
+
+
+.icon-btn:hover {
+
+    color: var(--primary);
+
+    border-color:
+        rgba(37, 99, 235, 0.35);
+
+    background: var(--primary-soft);
+
+    transform: translateY(-1px);
+}
+
+
+.icon-btn i {
+
+    font-size: 14px;
+}
+
+
+.notification-dot {
+
+    position: absolute;
+
+    top: 7px;
+    right: 7px;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--danger);
+
+    border:
+        2px solid
+        var(--card-bg);
+
+    display: block;
+}
+
+
+/* =========================================================
+   14. CONTENT
+========================================================= */
+
+.content {
+
+    flex: 1;
+
+    width: 100%;
+
+    max-width: 1450px;
+
+    margin: 0 auto;
+
+    padding:
+        30px 30px 40px;
+}
+
+
+/* =========================================================
+   15. PROJECT HEADER
+========================================================= */
+
+.projects-header {
+
+    margin-bottom: 24px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.section-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 8px;
+
+    color: var(--primary);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.section-label i {
+
+    font-size: 11px;
+}
+
+
+.projects-header h1 {
+
+    font-size: clamp(
+        25px,
+        3vw,
+        34px
+    );
+
+    line-height: 1.2;
+
+    letter-spacing: -1px;
+
+    font-weight: 800;
+
+    color: var(--text);
+}
+
+
+.projects-header h1 span {
+
+    color: var(--primary);
+}
+
+
+.projects-header p {
+
+    margin-top: 7px;
+
+    max-width: 650px;
+
+    font-family:
+        "Noto Sans Devanagari",
+        var(--font-main);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    color: var(--text-light);
+}
+
+
+/* =========================================================
+   16. PRIMARY BUTTON
+========================================================= */
+
+.primary-btn {
+
+    min-height: 42px;
+
+    padding:
+        0 17px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--primary-dark)
+        );
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 7px 18px
+        rgba(37, 99, 235, 0.20);
+
+    cursor: pointer;
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+
+.primary-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(37, 99, 235, 0.28);
+}
+
+
+.primary-btn:active {
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   17. PROJECT STATISTICS
+========================================================= */
+
+.project-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+
+.stat-card {
+
+    min-height: 92px;
+
+    padding: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: var(--radius);
+
+    background: var(--card-bg);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+}
+
+
+.stat-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow);
+
+    border-color:
+        rgba(37, 99, 235, 0.20);
+}
+
+
+.stat-icon {
+
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: var(--primary-soft);
+
+    color: var(--primary);
+
+    font-size: 17px;
+}
+
+
+.stat-card:nth-child(2)
+.stat-icon {
+
+    background: var(--success-soft);
+
+    color: var(--success);
+}
+
+
+.stat-card:nth-child(3)
+.stat-icon {
+
+    background: var(--warning-soft);
+
+    color: var(--warning);
+}
+
+
+.stat-card:nth-child(4)
+.stat-icon {
+
+    background: var(--info-soft);
+
+    color: var(--info);
+}
+
+
+.stat-info {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.stat-info span {
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    color: var(--text-light);
+}
+
+
+.stat-info strong {
+
+    margin-top: 2px;
+
+    font-size: 24px;
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+   18. PROJECT TOOLBAR
+========================================================= */
+
+.project-toolbar {
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+
+.search-box,
+.filter-box {
+
+    min-height: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 11px;
+
+    background: var(--card-bg);
+
+    transition:
+        border-color var(--transition),
+        box-shadow var(--transition);
+}
+
+
+.search-box {
+
+    width: min(
+        100%,
+        520px
+    );
+
+    padding:
+        0 13px;
+
+    gap: 9px;
+}
+
+
+.search-box:focus-within,
+.filter-box:focus-within {
+
+    border-color:
+        rgba(37, 99, 235, 0.55);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37, 99, 235, 0.08);
+}
+
+
+.search-box i,
+.filter-box i {
+
+    flex-shrink: 0;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    height: 41px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--text);
+
+    font-size: 11px;
+}
+
+
+.search-box input::placeholder {
+
+    color: var(--text-muted);
+}
+
+
+.filter-box {
+
+    min-width: 180px;
+
+    padding:
+        0 12px;
+
+    gap: 8px;
+}
+
+
+.filter-box select {
+
+    width: 100%;
+
+    height: 41px;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--text-secondary);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+[data-theme="dark"]
+.filter-box select {
+
+    color: var(--text-secondary);
+
+    color-scheme: dark;
+}
+
+
+/* =========================================================
+   19. PROJECT GRID
+========================================================= */
+
+.projects-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   20. PROJECT CARD
+========================================================= */
+
+.project-card {
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: var(--radius-lg);
+
+    background: var(--card-bg);
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+
+    animation:
+        projectCardIn
+        0.45s
+        ease both;
+}
+
+
+.project-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow-lg);
+
+    border-color:
+        rgba(37, 99, 235, 0.20);
+}
+
+
+@keyframes projectCardIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(12px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   21. PROJECT IMAGE / COVER
+========================================================= */
+
+.project-image {
+
+    position: relative;
+
+    height: 145px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-soft),
+            rgba(99, 102, 241, 0.08)
+        );
+
+    border-bottom:
+        1px solid
+        var(--border-light);
+}
+
+
+.project-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(37, 99, 235, 0.07);
+
+    top: -75px;
+    right: -50px;
+}
+
+
+.project-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(37, 99, 235, 0.10);
+
+    bottom: -60px;
+    left: -30px;
+}
+
+
+.project-image-icon {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 17px;
+
+    background: var(--card-bg);
+
+    color: var(--primary);
+
+    font-size: 25px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(15, 23, 42, 0.10);
+}
+
+
+/* =========================================================
+   22. STATUS BADGES
+========================================================= */
+
+.status-badge {
+
+    position: absolute;
+
+    top: 13px;
+    right: 13px;
+
+    z-index: 5;
+
+    padding:
+        5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: 0.3px;
+
+    backdrop-filter: blur(8px);
+}
+
+
+.status-badge.completed {
+
+    background: var(--success-soft);
+
+    color: var(--success);
+
+    border:
+        1px solid
+        rgba(22, 163, 74, 0.16);
+}
+
+
+.status-badge.progress {
+
+    background: var(--warning-soft);
+
+    color: var(--warning);
+
+    border:
+        1px solid
+        rgba(217, 119, 6, 0.16);
+}
+
+
+.status-badge.planning {
+
+    background: var(--info-soft);
+
+    color: var(--info);
+
+    border:
+        1px solid
+        rgba(8, 145, 178, 0.16);
+}
+
+
+/* =========================================================
+   23. PROJECT BODY
+========================================================= */
+
+.project-body {
+
+    flex: 1;
+
+    padding: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.project-category {
+
+    align-self: flex-start;
+
+    margin-bottom: 7px;
+
+    color: var(--primary);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.9px;
+}
+
+
+.project-body h2 {
+
+    min-height: 44px;
+
+    margin-bottom: 7px;
+
+    font-size: 16px;
+
+    line-height: 1.35;
+
+    letter-spacing: -0.25px;
+
+    font-weight: 750;
+
+    color: var(--text);
+}
+
+
+.project-body p {
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 3;
+
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+
+    min-height: 52px;
+
+    margin-bottom: 14px;
+
+    font-family:
+        "Noto Sans Devanagari",
+        var(--font-main);
+
+    font-size: 10px;
+
+    line-height: 1.7;
+
+    color: var(--text-light);
+}
+
+
+/* =========================================================
+   24. TECHNOLOGY LIST
+========================================================= */
+
+.tech-list {
+
+    min-height: 26px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-bottom: 16px;
+}
+
+
+.tech-list span {
+
+    padding:
+        4px 7px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 6px;
+
+    background: var(--bg);
+
+    color: var(--text-secondary);
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   25. PROJECT FOOTER
+========================================================= */
+
+.project-footer {
+
+    margin-top: auto;
+
+    padding-top: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    border-top:
+        1px solid
+        var(--border-light);
+}
+
+
+.project-date {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: var(--text-muted);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.project-date i {
+
+    font-size: 9px;
+
+    color: var(--primary);
+}
+
+
+.project-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.project-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding:
+        7px 9px;
+
+    border-radius: 7px;
+
+    background: var(--primary-soft);
+
+    color: var(--primary);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        transform var(--transition);
+}
+
+
+.project-btn:hover {
+
+    background: var(--primary);
+
+    color: #ffffff;
+
+    transform: translateX(2px);
+}
+
+
+.project-btn i {
+
+    font-size: 8px;
+}
+
+
+/* =========================================================
+   26. EMPTY STATE
+========================================================= */
+
+.empty-state {
+
+    grid-column: 1 / -1;
+
+    min-height: 280px;
+
+    padding: 40px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border:
+        1px dashed
+        var(--border);
+
+    border-radius: var(--radius-lg);
+
+    background: var(--card-bg);
+}
+
+
+.empty-icon {
+
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 13px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: var(--primary-soft);
+
+    color: var(--primary);
+
+    font-size: 21px;
+}
+
+
+.empty-state h3 {
+
+    margin-bottom: 5px;
+
+    font-size: 15px;
+
+    font-weight: 750;
+
+    color: var(--text);
+}
+
+
+.empty-state p {
+
+    font-family:
+        "Noto Sans Devanagari",
+        var(--font-main);
+
+    font-size: 10px;
+
+    color: var(--text-light);
+}
+
+
+/* =========================================================
+   27. SIDEBAR OVERLAY
+========================================================= */
+
+.sidebar-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 900;
+
+    background:
+        rgba(15, 23, 42, 0.48);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity var(--transition),
+        visibility var(--transition);
+}
+
+
+.sidebar-overlay.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   28. PROJECT MODAL
+========================================================= */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity var(--transition),
+        visibility var(--transition);
+}
+
+
+.modal.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+.modal-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(15, 23, 42, 0.65);
+
+    backdrop-filter: blur(5px);
+
+    -webkit-backdrop-filter: blur(5px);
+}
+
+
+.modal-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(
+        100%,
+        520px
+    );
+
+    max-height: calc(
+        100vh - 40px
+    );
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 20px;
+
+    background: var(--card-bg);
+
+    color: var(--text);
+
+    box-shadow: var(--shadow-lg);
+
+    transform:
+        translateY(15px)
+        scale(0.97);
+
+    transition:
+        transform var(--transition);
+}
+
+
+.modal.active
+.modal-content {
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+.modal-close {
+
+    position: absolute;
+
+    top: 13px;
+    right: 13px;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: var(--bg);
+
+    color: var(--text-light);
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition),
+        color var(--transition);
+}
+
+
+.modal-close:hover {
+
+    background: var(--danger-soft);
+
+    color: var(--danger);
+}
+
+
+.modal-icon {
+
+    width: 55px;
+    height: 55px;
+
+    margin-bottom: 16px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: var(--primary-soft);
+
+    color: var(--primary);
+
+    font-size: 20px;
+}
+
+
+.modal-content h2 {
+
+    padding-right: 30px;
+
+    margin-bottom: 10px;
+
+    font-size: 21px;
+
+    line-height: 1.35;
+
+    font-weight: 800;
+}
+
+
+.modal-content p {
+
+    font-family:
+        "Noto Sans Devanagari",
+        var(--font-main);
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+    color: var(--text-light);
+}
+
+
+.modal-actions {
+
+    margin-top: 24px;
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 8px;
+}
+
+
+.secondary-btn {
+
+    min-height: 38px;
+
+    padding:
+        0 15px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 9px;
+
+    background: var(--bg);
+
+    color: var(--text-secondary);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition);
+}
+
+
+.secondary-btn:hover {
+
+    border-color: var(--primary);
+
+    background: var(--primary-soft);
+
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   29. FOOTER
+========================================================= */
+
+.footer {
+
+    min-height: 64px;
+
+    padding:
+        15px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    border-top:
+        1px solid
+        var(--border);
+
+    color: var(--text-muted);
+
+    font-size: 9px;
+}
+
+
+.footer p {
+
+    line-height: 1.5;
+}
+
+
+.footer > span {
+
+    color: var(--text-light);
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   30. RESPONSIVE — LARGE TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .projects-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .project-stats {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   31. RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    :root {
+
+        --sidebar-width: 265px;
+    }
+
+
+    .sidebar {
+
+        transform:
+            translateX(-100%);
+
+        box-shadow: var(--shadow-lg);
+    }
+
+
+    .sidebar.open {
+
+        transform:
+            translateX(0);
+    }
+
+
+    .sidebar-close {
+
+        display: flex;
+    }
+
+
+    .main-content {
+
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    .menu-toggle {
+
+        display: flex;
+    }
+
+
+    .topbar {
+
+        padding:
+            0 20px;
+    }
+
+
+    .content {
+
+        padding:
+            25px 20px 35px;
+    }
+
+
+    .footer {
+
+        padding:
+            15px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   32. RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .topbar {
+
+        min-height: 68px;
+
+        padding:
+            0 14px;
+
+        gap: 10px;
+    }
+
+
+    .page-title span {
+
+        font-size: 15px;
+    }
+
+
+    .page-title small {
+
+        display: none;
+    }
+
+
+    .topbar-actions {
+
+        gap: 5px;
+    }
+
+
+    .datetime {
+
+        display: none;
+    }
+
+
+    .icon-btn {
+
+        width: 36px;
+        height: 36px;
+    }
+
+
+    .content {
+
+        padding:
+            22px 14px 30px;
+    }
+
+
+    .projects-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .projects-header h1 {
+
+        font-size: 27px;
+    }
+
+
+    .projects-header p {
+
+        font-size: 10px;
+    }
+
+
+    .primary-btn {
+
+        width: 100%;
+    }
+
+
+    .project-stats {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+
+    .stat-card {
+
+        min-height: 82px;
+
+        padding: 12px;
+
+        gap: 9px;
+    }
+
+
+    .stat-icon {
+
+        width: 38px;
+        height: 38px;
+
+        border-radius: 10px;
+
+        font-size: 14px;
+    }
+
+
+    .stat-info span {
+
+        font-size: 8px;
+    }
+
+
+    .stat-info strong {
+
+        font-size: 20px;
+    }
+
+
+    .project-toolbar {
+
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+
+    .search-box {
+
+        width: 100%;
+    }
+
+
+    .filter-box {
+
+        width: 100%;
+
+        min-width: 0;
+    }
+
+
+    .projects-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 14px;
+    }
+
+
+    .project-image {
+
+        height: 135px;
+    }
+
+
+    .project-body {
+
+        padding: 16px;
+    }
+
+
+    .project-body h2 {
+
+        font-size: 15px;
+
+        min-height: auto;
+    }
+
+
+    .footer {
+
+        padding:
+            15px 14px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 5px;
+    }
+
+
+    .modal {
+
+        padding: 14px;
+    }
+
+
+    .modal-content {
+
+        padding: 24px 20px;
+
+        border-radius: 17px;
+    }
+
+}
+
+
+/* =========================================================
+   33. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .project-stats {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .stat-card {
+
+        min-height: 76px;
+    }
+
+
+    .project-footer {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .project-btn {
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+
+    .project-actions {
+
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   34. ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        scroll-behavior: auto !important;
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
+}
+
+
+/* =========================================================
+   35. PRINT
+========================================================= */
+
+@media print {
+
+    .sidebar,
+    .topbar,
+    .sidebar-overlay,
+    .primary-btn,
+    .project-toolbar,
+    .project-actions,
+    .footer {
+
+        display: none !important;
+    }
+
+
+    .main-content {
+
+        width: 100%;
+
+        margin: 0;
+    }
+
+
+    .content {
+
+        padding: 0;
+    }
+
+
+    .projects-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .project-card {
+
+        break-inside: avoid;
+
+        box-shadow: none;
+    }
+}
+
+
+/* =========================================================
+   END OF project.css v4.0 FINAL
+========================================================= */

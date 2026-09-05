@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="ne">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>BARIWAY DIGITAL HUB | Services</title>
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- =====================================================
+         SERVICES CSS
+    ====================================================== -->
+
+    <link rel="stylesheet"
+          href="css/services.css">
+
+</head>
+
+
+<body>
+
+<div class="services-page">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- Logo -->
+
+        <div class="sidebar-logo">
+
+            <div class="logo-box">
+                B
+            </div>
+
+            <div>
+
+                <h2>BARIWAY</h2>
+
+                <span>
+                    DIGITAL HUB
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-nav">
+
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-gauge-high"></i>
+
+                <span
+                    data-ne="ड्यासबोर्ड"
+                    data-en="Dashboard">
+
+                    ड्यासबोर्ड
+
+                </span>
+
+            </a>
+
+
+            <a href="website.html">
+
+                <i class="fa-solid fa-globe"></i>
+
+                <span
+                    data-ne="वेबसाइट विकास"
+                    data-en="Website Development">
+
+                    वेबसाइट विकास
+
+                </span>
+
+            </a>
+
+
+            <a href="projects.html">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                <span
+                    data-ne="प्रोजेक्टहरू"
+                    data-en="Projects">
+
+                    प्रोजेक्टहरू
+
+                </span>
+
+            </a>
+
+
+            <a href="clients.html">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span
+                    data-ne="क्लाइन्टहरू"
+                    data-en="Clients">
+
+                    क्लाइन्टहरू
+
+                </span>
+
+            </a>
+
+
+            <a href="services.html"
+               class="active">
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                <span
+                    data-ne="सेवाहरू"
+                    data-en="Services">
+
+                    सेवाहरू
+
+                </span>
+
+            </a>
+
+
+            <a href="analytics.html">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span
+                    data-ne="विश्लेषण"
+                    data-en="Analytics">
+
+                    विश्लेषण
+
+                </span>
+
+            </a>
+
+
+            <a href="settings.html">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span
+                    data-ne="सेटिङ"
+                    data-en="Settings">
+
+                    सेटिङ
+
+                </span>
+
+            </a>
+
+        </nav>
+
+
+
+        <!-- Sidebar User -->
+
+        <div class="sidebar-bottom">
+
+
+            <div class="sidebar-user">
+
+                <div class="user-avatar">
+                    TB
+                </div>
+
+                <div>
+
+                    <strong>
+                        टेकबहादुर बिक
+                    </strong>
+
+                    <small>
+                        Premium Member
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="logout-btn"
+                id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span
+                    data-ne="लगआउट"
+                    data-en="Logout">
+
+                    लगआउट
+
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+        ================================================== -->
+
+        <header class="topbar">
+
+
+            <div class="page-heading">
+
+                <h1
+                    data-ne="सेवा व्यवस्थापन"
+                    data-en="Service Management">
+
+                    सेवा व्यवस्थापन
+
+                </h1>
+
+                <p
+                    data-ne="तपाईंका सबै डिजिटल सेवाहरू व्यवस्थित गर्नुहोस्।"
+                    data-en="Manage all your digital services in one place.">
+
+                    तपाईंका सबै डिजिटल सेवाहरू व्यवस्थित गर्नुहोस्।
+
+                </p>
+
+            </div>
+
+
+
+            <div class="topbar-actions">
+
+
+                <!-- Language -->
+
+                <button
+                    class="topbar-btn"
+                    id="languageBtn"
+                    type="button">
+
+                    <i class="fa-solid fa-language"></i>
+
+                    <span id="currentLanguage">
+                        नेपाली
+                    </span>
+
+                </button>
+
+
+                <!-- Theme -->
+
+                <button
+                    class="topbar-btn"
+                    id="themeBtn"
+                    type="button"
+                    aria-label="Toggle theme">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+                <!-- Profile -->
+
+                <div class="mini-profile">
+
+                    <div class="mini-avatar">
+                        TB
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             SERVICE STATISTICS
+        ================================================== -->
+
+        <section class="service-stats">
+
+
+            <!-- Total -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </div>
+
+                <div>
+
+                    <span
+                        data-ne="कुल सेवाहरू"
+                        data-en="Total Services">
+
+                        कुल सेवाहरू
+
+                    </span>
+
+                    <strong id="totalServices">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Active -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon active-icon">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+                <div>
+
+                    <span
+                        data-ne="सक्रिय सेवाहरू"
+                        data-en="Active Services">
+
+                        सक्रिय सेवाहरू
+
+                    </span>
+
+                    <strong id="activeServices">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Inactive -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon inactive-icon">
+
+                    <i class="fa-solid fa-circle-pause"></i>
+
+                </div>
+
+                <div>
+
+                    <span
+                        data-ne="निष्क्रिय"
+                        data-en="Inactive">
+
+                        निष्क्रिय
+
+                    </span>
+
+                    <strong id="inactiveServices">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Featured -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon featured-icon">
+
+                    <i class="fa-solid fa-star"></i>
+
+                </div>
+
+                <div>
+
+                    <span
+                        data-ne="Featured सेवाहरू"
+                        data-en="Featured Services">
+
+                        Featured सेवाहरू
+
+                    </span>
+
+                    <strong id="featuredServices">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SERVICE TOOLBAR
+        ================================================== -->
+
+        <section class="service-toolbar">
+
+
+            <!-- Search -->
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="search"
+                    id="serviceSearch"
+
+                    placeholder="सेवा खोज्नुहोस्..."
+
+                    data-placeholder-ne="सेवा खोज्नुहोस्..."
+                    data-placeholder-en="Search services...">
+
+            </div>
+
+
+
+            <!-- Category -->
+
+            <select id="categoryFilter">
+
+                <option
+                    value="all"
+                    data-ne="सबै Category"
+                    data-en="All Categories">
+
+                    सबै Category
+
+                </option>
+
+                <option
+                    value="web"
+                    data-ne="वेब विकास"
+                    data-en="Web Development">
+
+                    वेब विकास
+
+                </option>
+
+                <option
+                    value="software"
+                    data-ne="Software Development"
+                    data-en="Software Development">
+
+                    Software Development
+
+                </option>
+
+                <option
+                    value="ai"
+                    data-ne="AI Solutions"
+                    data-en="AI Solutions">
+
+                    AI Solutions
+
+                </option>
+
+                <option
+                    value="design"
+                    data-ne="Graphic Design"
+                    data-en="Graphic Design">
+
+                    Graphic Design
+
+                </option>
+
+                <option
+                    value="video"
+                    data-ne="Video Editing"
+                    data-en="Video Editing">
+
+                    Video Editing
+
+                </option>
+
+                <option
+                    value="training"
+                    data-ne="Training"
+                    data-en="Training">
+
+                    Training
+
+                </option>
+
+            </select>
+
+
+
+            <!-- Status -->
+
+            <select id="statusFilter">
+
+                <option
+                    value="all"
+                    data-ne="सबै Status"
+                    data-en="All Status">
+
+                    सबै Status
+
+                </option>
+
+                <option
+                    value="active"
+                    data-ne="सक्रिय"
+                    data-en="Active">
+
+                    सक्रिय
+
+                </option>
+
+                <option
+                    value="inactive"
+                    data-ne="निष्क्रिय"
+                    data-en="Inactive">
+
+                    निष्क्रिय
+
+                </option>
+
+            </select>
+
+
+
+            <!-- Add -->
+
+            <button
+                class="add-service-btn"
+                id="addServiceBtn"
+                type="button">
+
+                <i class="fa-solid fa-plus"></i>
+
+                <span
+                    data-ne="नयाँ सेवा"
+                    data-en="Add Service">
+
+                    नयाँ सेवा
+
+                </span>
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SERVICE GRID
+        ================================================== -->
+
+        <section class="service-section">
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <h2
+                        data-ne="हाम्रा सेवाहरू"
+                        data-en="Our Services">
+
+                        हाम्रा सेवाहरू
+
+                    </h2>
+
+                    <p
+                        data-ne="तपाईंले प्रदान गर्ने डिजिटल सेवाहरूको सूची"
+                        data-en="List of digital services you provide.">
+
+                        तपाईंले प्रदान गर्ने डिजिटल सेवाहरूको सूची
+
+                    </p>
+
+                </div>
+
+
+                <div class="service-count">
+
+                    <span id="visibleServiceCount">
+                        0
+                    </span>
+
+                    <span
+                        data-ne="सेवा"
+                        data-en="services">
+
+                        सेवा
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Dynamic Service Cards -->
+
+            <div
+                class="service-grid"
+                id="serviceGrid">
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER
+        ================================================== -->
+
+        <footer>
+
+            © 2026
+
+            <strong>
+                BARIWAY DIGITAL HUB
+            </strong>
+
+            —
+
+            <span
+                data-ne="From Nepal To The World"
+                data-en="From Nepal To The World">
+
+                From Nepal To The World
+
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+
+<!-- =====================================================
+     ADD / EDIT SERVICE MODAL
+====================================================== -->
+
+<div
+    class="modal-overlay"
+    id="serviceModal">
+
+
+    <div class="service-modal">
+
+
+        <!-- Modal Header -->
+
+        <div class="modal-header">
+
+
+            <div>
+
+                <h2
+                    id="modalTitle"
+                    data-ne="नयाँ सेवा थप्नुहोस्"
+                    data-en="Add New Service">
+
+                    नयाँ सेवा थप्नुहोस्
+
+                </h2>
+
+                <p
+                    data-ne="सेवाको विवरण भर्नुहोस्"
+                    data-en="Enter service information">
+
+                    सेवाको विवरण भर्नुहोस्
+
+                </p>
+
+            </div>
+
+
+            <button
+                class="modal-close"
+                id="closeModal"
+                type="button">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- Form -->
+
+        <form id="serviceForm">
+
+
+            <input
+                type="hidden"
+                id="serviceId">
+
+
+
+            <!-- Service Name -->
+
+            <div class="form-group">
+
+                <label
+                    data-ne="सेवाको नाम"
+                    data-en="Service Name">
+
+                    सेवाको नाम
+
+                </label>
+
+                <input
+                    type="text"
+                    id="serviceName"
+
+                    required
+
+                    placeholder="जस्तै: Website Development"
+
+                    data-placeholder-ne="जस्तै: Website Development"
+                    data-placeholder-en="e.g. Website Development">
+
+            </div>
+
+
+
+            <!-- Category -->
+
+            <div class="form-row">
+
+
+                <div class="form-group">
+
+                    <label
+                        data-ne="Category"
+                        data-en="Category">
+
+                        Category
+
+                    </label>
+
+
+                    <select
+                        id="serviceCategory"
+                        required>
+
+                        <option
+                            value="web"
+                            data-ne="वेब विकास"
+                            data-en="Web Development">
+
+                            वेब विकास
+
+                        </option>
+
+                        <option
+                            value="software"
+                            data-ne="Software Development"
+                            data-en="Software Development">
+
+                            Software Development
+
+                        </option>
+
+                        <option
+                            value="ai"
+                            data-ne="AI Solutions"
+                            data-en="AI Solutions">
+
+                            AI Solutions
+
+                        </option>
+
+                        <option
+                            value="design"
+                            data-ne="Graphic Design"
+                            data-en="Graphic Design">
+
+                            Graphic Design
+
+                        </option>
+
+                        <option
+                            value="video"
+                            data-ne="Video Editing"
+                            data-en="Video Editing">
+
+                            Video Editing
+
+                        </option>
+
+                        <option
+                            value="training"
+                            data-ne="Training"
+                            data-en="Training">
+
+                            Training
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Status -->
+
+                <div class="form-group">
+
+                    <label
+                        data-ne="Status"
+                        data-en="Status">
+
+                        Status
+
+                    </label>
+
+
+                    <select
+                        id="serviceStatus">
+
+                        <option
+                            value="active"
+                            data-ne="सक्रिय"
+                            data-en="Active">
+
+                            सक्रिय
+
+                        </option>
+
+                        <option
+                            value="inactive"
+                            data-ne="निष्क्रिय"
+                            data-en="Inactive">
+
+                            निष्क्रिय
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Description -->
+
+            <div class="form-group">
+
+                <label
+                    data-ne="विवरण"
+                    data-en="Description">
+
+                    विवरण
+
+                </label>
+
+
+                <textarea
+                    id="serviceDescription"
+
+                    rows="4"
+
+                    required
+
+                    placeholder="सेवाको छोटो विवरण लेख्नुहोस्..."
+
+                    data-placeholder-ne="सेवाको छोटो विवरण लेख्नुहोस्..."
+                    data-placeholder-en="Write a short service description...">
+                </textarea>
+
+            </div>
+
+
+
+            <!-- Price -->
+
+            <div class="form-row">
+
+
+                <div class="form-group">
+
+                    <label
+                        data-ne="Starting Price"
+                        data-en="Starting Price">
+
+                        Starting Price
+
+                    </label>
+
+
+                    <input
+                        type="number"
+                        id="servicePrice"
+
+                        min="0"
+
+                        placeholder="0">
+
+                </div>
+
+
+
+                <!-- Featured -->
+
+                <div class="form-group">
+
+                    <label
+                        data-ne="Featured"
+                        data-en="Featured">
+
+                        Featured
+
+                    </label>
+
+
+                    <select
+                        id="serviceFeatured">
+
+                        <option
+                            value="no"
+                            data-ne="होइन"
+                            data-en="No">
+
+                            होइन
+
+                        </option>
+
+                        <option
+                            value="yes"
+                            data-ne="हो"
+                            data-en="Yes">
+
+                            हो
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Icon -->
+
+            <div class="form-group">
+
+                <label
+                    data-ne="Icon"
+                    data-en="Icon">
+
+                    Icon
+
+                </label>
+
+
+                <select
+                    id="serviceIcon">
+
+                    <option value="fa-code">
+                        💻 Code
+                    </option>
+
+                    <option value="fa-laptop-code">
+                        🖥️ Software
+                    </option>
+
+                    <option value="fa-robot">
+                        🤖 AI
+                    </option>
+
+                    <option value="fa-palette">
+                        🎨 Design
+                    </option>
+
+                    <option value="fa-video">
+                        🎬 Video
+                    </option>
+
+                    <option value="fa-graduation-cap">
+                        📚 Training
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- Modal Actions -->
+
+            <div class="modal-actions">
+
+
+                <button
+                    type="button"
+                    class="cancel-btn"
+                    id="cancelService">
+
+                    <span
+                        data-ne="रद्द गर्नुहोस्"
+                        data-en="Cancel">
+
+                        रद्द गर्नुहोस्
+
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="save-service-btn">
+
+                    <i class="fa-solid fa-floppy-disk"></i>
+
+                    <span
+                        data-ne="सेवा Save गर्नुहोस्"
+                        data-en="Save Service">
+
+                        सेवा Save गर्नुहोस्
+
+                    </span>
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     SERVICES JS
+====================================================== -->
+
+<script src="js/services.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="ne">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>BARIWAY DIGITAL HUB | Settings</title>
+
+    <!-- Google Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Settings CSS -->
+    <link
+        rel="stylesheet"
+        href="css/settings.css">
+
+</head>
+
+
+<body>
+
+<div class="settings-page">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-logo">
+
+            <div class="logo-box">
+                B
+            </div>
+
+            <div>
+
+                <h2>BARIWAY</h2>
+
+                <span>
+                    DIGITAL HUB
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html">
+
+                <i class="fa-solid fa-gauge-high"></i>
+
+                <span
+                    data-ne="ड्यासबोर्ड"
+                    data-en="Dashboard">
+                    ड्यासबोर्ड
+                </span>
+
+            </a>
+
+
+            <a href="website.html">
+
+                <i class="fa-solid fa-globe"></i>
+
+                <span
+                    data-ne="वेबसाइट विकास"
+                    data-en="Website Development">
+                    वेबसाइट विकास
+                </span>
+
+            </a>
+
+
+            <a href="projects.html">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                <span
+                    data-ne="प्रोजेक्टहरू"
+                    data-en="Projects">
+                    प्रोजेक्टहरू
+                </span>
+
+            </a>
+
+
+            <a href="clients.html">
+
+                <i class="fa-solid fa-users"></i>
+
+                <span
+                    data-ne="क्लाइन्टहरू"
+                    data-en="Clients">
+                    क्लाइन्टहरू
+                </span>
+
+            </a>
+
+
+            <a href="services.html">
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                <span
+                    data-ne="सेवाहरू"
+                    data-en="Services">
+                    सेवाहरू
+                </span>
+
+            </a>
+
+
+            <a href="analytics.html">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span
+                    data-ne="विश्लेषण"
+                    data-en="Analytics">
+                    विश्लेषण
+                </span>
+
+            </a>
+
+
+            <a
+                href="settings.html"
+                class="active">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span
+                    data-ne="सेटिङ"
+                    data-en="Settings">
+                    सेटिङ
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Sidebar Bottom -->
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-user">
+
+                <div class="user-avatar">
+                    TB
+                </div>
+
+                <div>
+
+                    <strong>
+                        टेकबहादुर बिक
+                    </strong>
+
+                    <small>
+                        Premium Member
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="logout-btn"
+                id="logoutBtn">
+
+                <i
+                    class="fa-solid fa-right-from-bracket">
+                </i>
+
+                <span
+                    data-ne="लगआउट"
+                    data-en="Logout">
+                    लगआउट
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="page-heading">
+
+                <h1
+                    data-ne="सेटिङ"
+                    data-en="Settings">
+
+                    सेटिङ
+
+                </h1>
+
+                <p
+                    data-ne="तपाईंको Dashboard र Website preferences व्यवस्थापन गर्नुहोस्।"
+                    data-en="Manage your dashboard and website preferences.">
+
+                    तपाईंको Dashboard र Website preferences व्यवस्थापन गर्नुहोस्।
+
+                </p>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+
+                <button
+                    class="topbar-btn"
+                    id="languageBtn">
+
+                    <i class="fa-solid fa-language"></i>
+
+                    <span id="currentLanguage">
+                        नेपाली
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="topbar-btn"
+                    id="themeBtn">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+
+                <div class="mini-avatar">
+                    TB
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================================
+             SETTINGS GRID
+        ================================================== -->
+
+        <section class="settings-grid">
+
+
+            <!-- =================================================
+                 APPEARANCE
+            ================================================== -->
+
+            <div class="settings-card">
+
+                <div class="card-heading">
+
+                    <div class="heading-icon">
+
+                        <i
+                            class="fa-solid fa-palette">
+                        </i>
+
+                    </div>
+
+                    <div>
+
+                        <h2
+                            data-ne="Appearance"
+                            data-en="Appearance">
+
+                            Appearance
+
+                        </h2>
+
+                        <p
+                            data-ne="Dashboard को look परिवर्तन गर्नुहोस्।"
+                            data-en="Customize your dashboard appearance.">
+
+                            Dashboard को look परिवर्तन गर्नुहोस्।
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div class="setting-info">
+
+                        <strong
+                            data-ne="Dark Mode"
+                            data-en="Dark Mode">
+
+                            Dark Mode
+
+                        </strong>
+
+                        <small
+                            data-ne="Dark theme प्रयोग गर्नुहोस्।"
+                            data-en="Use the dark theme.">
+
+                            Dark theme प्रयोग गर्नुहोस्।
+
+                        </small>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="darkModeToggle">
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div class="setting-info">
+
+                        <strong
+                            data-ne="Compact Layout"
+                            data-en="Compact Layout">
+
+                            Compact Layout
+
+                        </strong>
+
+                        <small
+                            data-ne="Dashboard spacing कम गर्नुहोस्।"
+                            data-en="Reduce dashboard spacing.">
+
+                            Dashboard spacing कम गर्नुहोस्।
+
+                        </small>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="compactModeToggle">
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 LANGUAGE
+            ================================================== -->
+
+            <div class="settings-card">
+
+                <div class="card-heading">
+
+                    <div class="heading-icon">
+
+                        <i
+                            class="fa-solid fa-language">
+                        </i>
+
+                    </div>
+
+                    <div>
+
+                        <h2
+                            data-ne="भाषा"
+                            data-en="Language">
+
+                            भाषा
+
+                        </h2>
+
+                        <p
+                            data-ne="Website को भाषा छान्नुहोस्।"
+                            data-en="Choose your website language.">
+
+                            Website को भाषा छान्नुहोस्।
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="language-options">
+
+
+                    <label class="language-option">
+
+                        <input
+                            type="radio"
+                            name="language"
+                            value="ne"
+                            id="languageNepali">
+
+                        <span>
+
+                            🇳🇵
+
+                            <strong>
+                                नेपाली
+                            </strong>
+
+                        </span>
+
+                    </label>
+
+
+                    <label class="language-option">
+
+                        <input
+                            type="radio"
+                            name="language"
+                            value="en"
+                            id="languageEnglish">
+
+                        <span>
+
+                            🇬🇧
+
+                            <strong>
+                                English
+                            </strong>
+
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 NOTIFICATIONS
+            ================================================== -->
+
+            <div class="settings-card">
+
+                <div class="card-heading">
+
+                    <div class="heading-icon">
+
+                        <i
+                            class="fa-solid fa-bell">
+                        </i>
+
+                    </div>
+
+                    <div>
+
+                        <h2
+                            data-ne="Notifications"
+                            data-en="Notifications">
+
+                            Notifications
+
+                        </h2>
+
+                        <p
+                            data-ne="Notification preferences व्यवस्थापन गर्नुहोस्।"
+                            data-en="Manage notification preferences.">
+
+                            Notification preferences व्यवस्थापन गर्नुहोस्।
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div class="setting-info">
+
+                        <strong
+                            data-ne="सबै Notifications"
+                            data-en="All Notifications">
+
+                            सबै Notifications
+
+                        </strong>
+
+                        <small
+                            data-ne="नयाँ activity को सूचना पाउनुहोस्।"
+                            data-en="Receive activity notifications.">
+
+                            नयाँ activity को सूचना पाउनुहोस्।
+
+                        </small>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="notificationsToggle">
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div class="setting-info">
+
+                        <strong
+                            data-ne="Project Updates"
+                            data-en="Project Updates">
+
+                            Project Updates
+
+                        </strong>
+
+                        <small
+                            data-ne="Project परिवर्तन हुँदा सूचना।"
+                            data-en="Get notified about project changes.">
+
+                            Project परिवर्तन हुँदा सूचना।
+
+                        </small>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="projectNotificationToggle">
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div class="setting-info">
+
+                        <strong
+                            data-ne="Client Updates"
+                            data-en="Client Updates">
+
+                            Client Updates
+
+                        </strong>
+
+                        <small
+                            data-ne="नयाँ client थपिँदा सूचना।"
+                            data-en="Get notified when clients are added.">
+
+                            नयाँ client थपिँदा सूचना।
+
+                        </small>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="clientNotificationToggle">
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DASHBOARD
+            ================================================== -->
+
+            <div class="settings-card">
+
+                <div class="card-heading">
+
+                    <div class="heading-icon">
+
+                        <i
+                            class="fa-solid fa-chart-pie">
+                        </i>
+
+                    </div>
+
+                    <div>
+
+                        <h2
+                            data-ne="Dashboard Preferences"
+                            data-en="Dashboard Preferences">
+
+                            Dashboard Preferences
+
+                        </h2>
+
+                        <p
+                            data-ne="Dashboard मा देखिने information नियन्त्रण गर्नुहोस्।"
+                            data-en="Control dashboard information.">
+
+                            Dashboard मा देखिने information नियन्त्रण गर्नुहोस्।
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div class="setting-info">
+
+                        <strong
+                            data-ne="Statistics Cards"
+                            data-en="Statistics Cards">
+
+                            Statistics Cards
+
+                        </strong>
+
+                        <small
+                            data-ne="Dashboard statistics देखाउनुहोस्।"
+                            data-en="Show dashboard statistics.">
+
+                            Dashboard statistics देखाउनुहोस्।
+
+                        </small>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="statsToggle">
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="setting-row">
+
+                    <div class="setting-info">
+
+                        <strong
+                            data-ne="Charts"
+                            data-en="Charts">
+
+                            Charts
+
+                        </strong>
+
+                        <small
+                            data-ne="Dashboard charts देखाउनुहोस्।"
+                            data-en="Show dashboard charts.">
+
+                            Dashboard charts देखाउनुहोस्।
+
+                        </small>
+
+                    </div>
+
+
+                    <label class="switch">
+
+                        <input
+                            type="checkbox"
+                            id="chartsToggle">
+
+                        <span class="slider"></span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 DATA MANAGEMENT
+            ================================================== -->
+
+            <div class="settings-card danger-card">
+
+                <div class="card-heading">
+
+                    <div class="heading-icon danger">
+
+                        <i
+                            class="fa-solid fa-database">
+                        </i>
+
+                    </div>
+
+                    <div>
+
+                        <h2
+                            data-ne="Data Management"
+                            data-en="Data Management">
+
+                            Data Management
+
+                        </h2>
+
+                        <p
+                            data-ne="Local data व्यवस्थापन गर्नुहोस्।"
+                            data-en="Manage locally stored data.">
+
+                            Local data व्यवस्थापन गर्नुहोस्।
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="data-actions">
+
+
+                    <button
+                        class="secondary-btn"
+                        id="exportDataBtn">
+
+                        <i
+                            class="fa-solid fa-download">
+                        </i>
+
+                        <span
+                            data-ne="Data Export"
+                            data-en="Export Data">
+
+                            Data Export
+
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="danger-btn"
+                        id="resetDataBtn">
+
+                        <i
+                            class="fa-solid fa-trash-can">
+                        </i>
+
+                        <span
+                            data-ne="सबै Data Reset"
+                            data-en="Reset All Data">
+
+                            सबै Data Reset
+
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SAVE BAR
+        ================================================== -->
+
+        <div class="save-bar">
+
+            <div>
+
+                <i
+                    class="fa-solid fa-circle-info">
+                </i>
+
+                <span
+                    data-ne="तपाईंका Settings स्वतः Save हुन्छन्।"
+                    data-en="Your settings are saved automatically.">
+
+                    तपाईंका Settings स्वतः Save हुन्छन्।
+
+                </span>
+
+            </div>
+
+
+            <button
+                id="saveSettingsBtn"
+                class="save-btn">
+
+                <i
+                    class="fa-solid fa-check">
+                </i>
+
+                <span
+                    data-ne="Save Settings"
+                    data-en="Save Settings">
+
+                    Save Settings
+
+                </span>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            © 2026
+
+            <strong>
+                BARIWAY DIGITAL HUB
+            </strong>
+
+            —
+
+            From Nepal To The World
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="js/settings.js"></script>
+
+</body>
+
+</html>

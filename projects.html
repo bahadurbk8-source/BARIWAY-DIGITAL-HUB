@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="ne">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0f172a">
+    <meta name="description"
+        content="BARIWAY DIGITAL HUB Projects Management">
+
+    <title>BARIWAY DIGITAL HUB | Projects</title>
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- =====================================================
+         PROJECT CSS
+    ====================================================== -->
+    <link rel="stylesheet" href="css/project.css">
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         PAGE WRAPPER
+    ====================================================== -->
+    <div class="page-wrapper">
+
+
+        <!-- =================================================
+             SIDEBAR
+        ================================================== -->
+        <aside class="sidebar" id="sidebar">
+
+            <!-- Sidebar Header -->
+            <div class="sidebar-header">
+
+                <a href="dashboard.html" class="brand">
+
+                    <span class="brand-icon">
+                        B
+                    </span>
+
+                    <span class="brand-text">
+                        <strong>BARIWAY</strong>
+                        <small>DIGITAL HUB</small>
+                    </span>
+
+                </a>
+
+                <button
+                    type="button"
+                    class="sidebar-close"
+                    id="sidebarClose"
+                    aria-label="Close menu">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 SIDEBAR PROFILE
+            ================================================== -->
+            <div class="sidebar-profile">
+
+                <div
+                    class="profile-avatar"
+                    id="sidebarAvatar">
+
+                    TB
+
+                </div>
+
+                <div class="profile-info">
+
+                    <strong id="sidebarName">
+                        टेक बहादुर BK
+                    </strong>
+
+                    <span id="sidebarRole">
+                        Premium Member
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 SIDEBAR NAVIGATION
+            ================================================== -->
+            <nav
+                class="sidebar-nav"
+                aria-label="Main Navigation">
+
+
+                <a
+                    href="dashboard.html"
+                    class="nav-item">
+
+                    <i class="fa-solid fa-gauge-high"></i>
+
+                    <span
+                        data-ne="Dashboard"
+                        data-en="Dashboard">
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="website.html"
+                    class="nav-item">
+
+                    <i class="fa-solid fa-globe"></i>
+
+                    <span
+                        data-ne="Website Development"
+                        data-en="Website Development">
+                        Website Development
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="nav-item">
+
+                    <i class="fa-solid fa-code"></i>
+
+                    <span
+                        data-ne="Software Development"
+                        data-en="Software Development">
+                        Software Development
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="nav-item">
+
+                    <i class="fa-solid fa-robot"></i>
+
+                    <span
+                        data-ne="AI Solutions"
+                        data-en="AI Solutions">
+                        AI Solutions
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="nav-item">
+
+                    <i class="fa-solid fa-palette"></i>
+
+                    <span
+                        data-ne="Graphic Design"
+                        data-en="Graphic Design">
+                        Graphic Design
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="nav-item">
+
+                    <i class="fa-solid fa-video"></i>
+
+                    <span
+                        data-ne="Video Editing"
+                        data-en="Video Editing">
+                        Video Editing
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="nav-item">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    <span
+                        data-ne="Training"
+                        data-en="Training">
+                        Training
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="projects.html"
+                    class="nav-item active">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <span
+                        data-ne="Projects"
+                        data-en="Projects">
+                        Projects
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="settings.html"
+                    class="nav-item">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    <span
+                        data-ne="Settings"
+                        data-en="Settings">
+                        Settings
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- =================================================
+                 SIDEBAR FOOTER
+            ================================================== -->
+            <div class="sidebar-footer">
+
+                <button
+                    type="button"
+                    class="logout-btn"
+                    id="logoutBtn">
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span
+                        data-ne="Logout"
+                        data-en="Logout">
+                        Logout
+                    </span>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN CONTENT
+        ================================================== -->
+        <main class="main-content">
+
+
+            <!-- =================================================
+                 TOPBAR
+            ================================================== -->
+            <header class="topbar">
+
+
+                <div class="topbar-left">
+
+                    <button
+                        type="button"
+                        class="menu-toggle"
+                        id="menuToggle"
+                        aria-label="Open menu">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+
+                    <div class="page-title">
+
+                        <span
+                            data-ne="Projects"
+                            data-en="Projects">
+                            Projects
+                        </span>
+
+                        <small
+                            data-ne="मेरो Projects Management"
+                            data-en="My Projects Management">
+                            मेरो Projects Management
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Topbar Actions -->
+                <div class="topbar-actions">
+
+
+                    <!-- Date & Time -->
+                    <div
+                        class="datetime"
+                        id="datetime"
+                        aria-label="Date and time">
+
+                        <i class="fa-regular fa-clock"></i>
+
+                        <span>
+                            Loading...
+                        </span>
+
+                    </div>
+
+
+                    <!-- Language -->
+                    <div class="language-wrapper">
+
+                        <button
+                            type="button"
+                            class="language-btn"
+                            id="languageToggle"
+                            aria-label="Change language">
+
+                            <i class="fa-solid fa-language"></i>
+
+                            <span id="currentLanguage">
+                                नेपाली
+                            </span>
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </button>
+
+
+                        <div
+                            class="language-menu"
+                            id="languageMenu">
+
+                            <button
+                                type="button"
+                                data-language="ne">
+
+                                🇳🇵 नेपाली
+
+                            </button>
+
+                            <button
+                                type="button"
+                                data-language="en">
+
+                                🇬🇧 English
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Notification -->
+                    <button
+                        type="button"
+                        class="icon-btn notification-btn"
+                        id="notificationBtn"
+                        aria-label="Notifications">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span
+                            class="notification-dot"
+                            id="notificationDot">
+                        </span>
+
+                    </button>
+
+
+                    <!-- Theme -->
+                    <button
+                        type="button"
+                        class="icon-btn"
+                        id="themeToggle"
+                        aria-label="Toggle theme"
+                        aria-pressed="false">
+
+                        <i class="fa-solid fa-moon"></i>
+
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 PAGE CONTENT
+            ================================================== -->
+            <section class="content">
+
+
+                <!-- =================================================
+                     PROJECT HEADER
+                ================================================== -->
+                <div class="projects-header">
+
+
+                    <div class="projects-heading">
+
+                        <span class="section-label">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                            <span
+                                data-ne="मेरो काम"
+                                data-en="MY WORK">
+                                मेरो काम
+                            </span>
+
+                        </span>
+
+
+                        <h1>
+
+                            <span
+                                data-ne="My"
+                                data-en="My">
+                                My
+                            </span>
+
+                            <span
+                                class="heading-highlight"
+                                data-ne="Projects"
+                                data-en="Projects">
+                                Projects
+                            </span>
+
+                        </h1>
+
+
+                        <p
+                            data-ne="मेरा हालसालैका तथा सम्पन्न Projects हरू यहाँ हेर्नुहोस्।"
+                            data-en="View and manage your recent and completed projects here.">
+                            मेरा हालसालैका तथा सम्पन्न Projects हरू यहाँ हेर्नुहोस्।
+                        </p>
+
+                    </div>
+
+
+                    <!-- Add Project -->
+                    <button
+                        type="button"
+                        class="primary-btn"
+                        id="addProjectBtn">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        <span
+                            data-ne="Add Project"
+                            data-en="Add Project">
+                            Add Project
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- =================================================
+                     PROJECT STATISTICS
+                ================================================== -->
+                <div class="project-stats">
+
+
+                    <!-- Total -->
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-folder"></i>
+                        </div>
+
+                        <div class="stat-info">
+
+                            <span
+                                data-ne="कुल Projects"
+                                data-en="Total Projects">
+                                कुल Projects
+                            </span>
+
+                            <strong id="totalProjects">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Completed -->
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+
+                        <div class="stat-info">
+
+                            <span
+                                data-ne="सम्पन्न"
+                                data-en="Completed">
+                                सम्पन्न
+                            </span>
+
+                            <strong id="completedProjects">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Progress -->
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-spinner"></i>
+                        </div>
+
+                        <div class="stat-info">
+
+                            <span
+                                data-ne="प्रगतिमा"
+                                data-en="In Progress">
+                                प्रगतिमा
+                            </span>
+
+                            <strong id="progressProjects">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Planning -->
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+
+                        <div class="stat-info">
+
+                            <span
+                                data-ne="योजना"
+                                data-en="Planning">
+                                योजना
+                            </span>
+
+                            <strong id="planningProjects">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     PROJECT TOOLBAR
+                ================================================== -->
+                <div class="project-toolbar">
+
+
+                    <!-- Search -->
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="search"
+                            id="projectSearch"
+                            autocomplete="off"
+                            data-placeholder-ne="Project खोज्नुहोस्..."
+                            data-placeholder-en="Search projects..."
+                            placeholder="Project खोज्नुहोस्..."
+                            aria-label="Search projects">
+
+                    </div>
+
+
+                    <!-- Filter -->
+                    <div class="filter-box">
+
+                        <i class="fa-solid fa-filter"></i>
+
+                        <select
+                            id="projectFilter"
+                            aria-label="Filter projects">
+
+                            <option
+                                value="all"
+                                data-ne="सबै Projects"
+                                data-en="All Projects">
+                                सबै Projects
+                            </option>
+
+                            <option
+                                value="completed"
+                                data-ne="सम्पन्न"
+                                data-en="Completed">
+                                सम्पन्न
+                            </option>
+
+                            <option
+                                value="progress"
+                                data-ne="प्रगतिमा"
+                                data-en="In Progress">
+                                प्रगतिमा
+                            </option>
+
+                            <option
+                                value="planning"
+                                data-ne="योजना"
+                                data-en="Planning">
+                                योजना
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     PROJECT GRID
+                ================================================== -->
+                <div
+                    class="projects-grid"
+                    id="projectsGrid">
+
+
+                    <!-- JavaScript dynamically renders projects -->
+
+
+                    <!-- Empty State -->
+                    <div
+                        class="empty-state"
+                        id="emptyState"
+                        hidden>
+
+                        <div class="empty-icon">
+
+                            <i class="fa-solid fa-folder-open"></i>
+
+                        </div>
+
+                        <h3
+                            data-ne="Project भेटिएन"
+                            data-en="No Projects Found">
+                            Project भेटिएन
+                        </h3>
+
+                        <p
+                            data-ne="तपाईंले खोज्नुभएको Project उपलब्ध छैन।"
+                            data-en="No project matches your search or filter.">
+                            तपाईंले खोज्नुभएको Project उपलब्ध छैन।
+                        </p>
+
+                        <button
+                            type="button"
+                            class="secondary-btn"
+                            id="emptyAddProjectBtn">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            <span
+                                data-ne="नयाँ Project थप्नुहोस्"
+                                data-en="Add New Project">
+                                नयाँ Project थप्नुहोस्
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+            <footer class="footer">
+
+                <p>
+                    ©
+                    <span id="currentYear">
+                        2026
+                    </span>
+
+                    BARIWAY DIGITAL HUB.
+                    <span
+                        data-ne="सर्वाधिकार सुरक्षित।"
+                        data-en="All Rights Reserved.">
+                        सर्वाधिकार सुरक्षित।
+                    </span>
+                </p>
+
+                <span>
+                    From Nepal To The World 🌍
+                </span>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         SIDEBAR OVERLAY
+    ====================================================== -->
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+        aria-hidden="true">
+    </div>
+
+
+    <!-- =====================================================
+         PROJECT FORM MODAL
+    ====================================================== -->
+    <div
+        class="modal project-form-modal"
+        id="projectFormModal"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="projectFormTitle">
+
+        <div class="modal-overlay"></div>
+
+
+        <div class="modal-content">
+
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="modal-label">
+
+                        <i class="fa-solid fa-folder-plus"></i>
+
+                        <span
+                            data-ne="Project Management"
+                            data-en="Project Management">
+                            Project Management
+                        </span>
+
+                    </span>
+
+                    <h2 id="projectFormTitle">
+
+                        Add Project
+
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="modal-close"
+                    id="projectFormClose"
+                    aria-label="Close">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- Project Form -->
+            <form
+                id="projectForm"
+                novalidate>
+
+
+                <!-- Project Name -->
+                <div class="form-group">
+
+                    <label for="projectTitle">
+
+                        <i class="fa-solid fa-heading"></i>
+
+                        <span
+                            data-ne="Project Name"
+                            data-en="Project Name">
+                            Project Name
+                        </span>
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="projectTitle"
+                        name="title"
+                        maxlength="120"
+                        autocomplete="off"
+                        placeholder="Project को नाम लेख्नुहोस्..."
+                        required>
+
+                </div>
+
+
+                <!-- Category + Status -->
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label for="projectCategory">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                            <span
+                                data-ne="Category"
+                                data-en="Category">
+                                Category
+                            </span>
+
+                        </label>
+
+                        <select
+                            id="projectCategory"
+                            name="category"
+                            required>
+
+                            <option
+                                value="web">
+                                Web Development
+                            </option>
+
+                            <option
+                                value="software">
+                                Software Development
+                            </option>
+
+                            <option
+                                value="ai">
+                                AI Solutions
+                            </option>
+
+                            <option
+                                value="design">
+                                Graphic Design
+                            </option>
+
+                            <option
+                                value="video">
+                                Video Editing
+                            </option>
+
+                            <option
+                                value="training">
+                                Training
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="projectStatus">
+
+                            <i class="fa-solid fa-chart-simple"></i>
+
+                            <span
+                                data-ne="Status"
+                                data-en="Status">
+                                Status
+                            </span>
+
+                        </label>
+
+                        <select
+                            id="projectStatus"
+                            name="status"
+                            required>
+
+                            <option
+                                value="completed">
+                                Completed
+                            </option>
+
+                            <option
+                                value="progress">
+                                In Progress
+                            </option>
+
+                            <option
+                                value="planning"
+                                selected>
+                                Planning
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Description -->
+                <div class="form-group">
+
+                    <label for="projectDescription">
+
+                        <i class="fa-solid fa-align-left"></i>
+
+                        <span
+                            data-ne="Description"
+                            data-en="Description">
+                            Description
+                        </span>
+
+                    </label>
+
+                    <textarea
+                        id="projectDescription"
+                        name="description"
+                        rows="4"
+                        maxlength="1000"
+                        placeholder="Project को विवरण लेख्नुहोस्..."
+                        required></textarea>
+
+                </div>
+
+
+                <!-- Technologies -->
+                <div class="form-group">
+
+                    <label for="projectTechnologies">
+
+                        <i class="fa-solid fa-code"></i>
+
+                        <span
+                            data-ne="Technologies"
+                            data-en="Technologies">
+                            Technologies
+                        </span>
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="projectTechnologies"
+                        name="technologies"
+                        maxlength="300"
+                        placeholder="HTML, CSS, JavaScript">
+
+                    <small
+                        class="form-help"
+                        data-ne="Technology हरू comma (,) ले छुट्याउनुहोस्।"
+                        data-en="Separate technologies with commas.">
+                        Technology हरू comma (,) ले छुट्याउनुहोस्।
+                    </small>
+
+                </div>
+
+
+                <!-- Year -->
+                <div class="form-group">
+
+                    <label for="projectYear">
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        <span
+                            data-ne="Year"
+                            data-en="Year">
+                            Year
+                        </span>
+
+                    </label>
+
+                    <input
+                        type="number"
+                        id="projectYear"
+                        name="year"
+                        min="2000"
+                        max="2100"
+                        value="2026"
+                        required>
+
+                </div>
+
+
+                <!-- Form Actions -->
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="projectFormCancel">
+
+                        <i class="fa-solid fa-xmark"></i>
+
+                        <span
+                            data-ne="Cancel"
+                            data-en="Cancel">
+                            Cancel
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                        id="projectFormSubmit">
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        <span
+                            data-ne="Add Project"
+                            data-en="Add Project">
+                            Add Project
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         PROJECT DETAILS MODAL
+    ====================================================== -->
+    <div
+        class="modal"
+        id="projectModal"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle">
+
+        <div class="modal-overlay"></div>
+
+
+        <div class="modal-content details-modal">
+
+
+            <!-- Close -->
+            <button
+                type="button"
+                class="modal-close"
+                id="modalClose"
+                aria-label="Close">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <!-- Icon -->
+            <div
+                class="modal-icon"
+                id="modalIcon">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+            </div>
+
+
+            <!-- Category -->
+            <span
+                class="modal-category"
+                id="modalCategory">
+                Project
+            </span>
+
+
+            <!-- Title -->
+            <h2 id="modalTitle">
+                Project
+            </h2>
+
+
+            <!-- Description -->
+            <p id="modalDescription">
+                Project details.
+            </p>
+
+
+            <!-- Status -->
+            <div
+                class="modal-detail-row"
+                id="modalStatusRow">
+
+                <span>
+                    Status
+                </span>
+
+                <strong id="modalStatus">
+                    Planning
+                </strong>
+
+            </div>
+
+
+            <!-- Year -->
+            <div
+                class="modal-detail-row"
+                id="modalYearRow">
+
+                <span>
+                    Year
+                </span>
+
+                <strong id="modalYear">
+                    2026
+                </strong>
+
+            </div>
+
+
+            <!-- Technologies -->
+            <div class="modal-technologies">
+
+                <span>
+                    Technologies
+                </span>
+
+                <div
+                    class="modal-tech-list"
+                    id="modalTechnologies">
+                </div>
+
+            </div>
+
+
+            <!-- Actions -->
+            <div class="modal-actions">
+
+
+                <button
+                    type="button"
+                    class="danger-btn"
+                    id="modalDeleteBtn">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    <span
+                        data-ne="Delete"
+                        data-en="Delete">
+                        Delete
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="secondary-btn"
+                    id="modalEditBtn">
+
+                    <i class="fa-solid fa-pen"></i>
+
+                    <span
+                        data-ne="Edit"
+                        data-en="Edit">
+                        Edit
+                    </span>
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="primary-btn"
+                    id="modalCloseBtn">
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                    <span
+                        data-ne="Close"
+                        data-en="Close">
+                        Close
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         NOTIFICATION PANEL
+    ====================================================== -->
+    <div
+        class="notification-panel"
+        id="notificationPanel"
+        aria-hidden="true">
+
+        <div class="notification-header">
+
+            <div>
+
+                <strong
+                    data-ne="Notifications"
+                    data-en="Notifications">
+                    Notifications
+                </strong>
+
+                <small
+                    id="notificationCount">
+                    0
+                </small>
+
+            </div>
+
+            <button
+                type="button"
+                id="notificationClose"
+                aria-label="Close notifications">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+        </div>
+
+
+        <div
+            class="notification-list"
+            id="notificationList">
+
+            <!-- JavaScript renders notifications -->
+
+        </div>
+
+
+        <div class="notification-footer">
+
+            <button
+                type="button"
+                id="markNotificationsRead">
+
+                <i class="fa-solid fa-check-double"></i>
+
+                <span
+                    data-ne="सबैलाई Read गर्नुहोस्"
+                    data-en="Mark all as read">
+                    सबैलाई Read गर्नुहोस्
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         GLOBAL JAVASCRIPT
+    ====================================================== -->
+    <script src="js/project.js"></script>
+
+</body>
+
+</html>
